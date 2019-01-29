@@ -8,10 +8,18 @@ module.exports = function(paths) {
         module: {
             rules: [
 				{
-					test:  /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.otf$|\.ttf$|\.wav$|\.mp3$/,
+					test:  /\.jpe?g$|\.gif$|\.png$|\.svg$/,
 					loader: "file-loader",
 				    options: {
-				      	outputPath: 'static',
+				      	outputPath: 'static/images',
+				    },
+					exclude: /node_modules/
+				},
+				{
+					test:  /\.woff$|\.otf$|\.ttf$/,
+					loader: "file-loader",
+				    options: {
+				      	outputPath: 'static/fonts',
 				    },
 					exclude: /node_modules/
 				}
