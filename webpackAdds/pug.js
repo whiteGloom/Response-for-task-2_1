@@ -26,7 +26,7 @@ module.exports = function(paths) {
         },
         plugins: [
 			new HTMLWebpackPlugin({
-				template: paths + "/dev/index.pug",
+				template: paths + "/dev/views/index.pug",
 				inject: false,												// Параметр, отключающий включение в конечный HTML ссылок на собранные файлы CSS, JS и т.д.
 				minify: false												// Параметр, отключающий минификацию конечного HTML
 			}),
