@@ -15,13 +15,18 @@ module.exports = function(paths) {
             rules: [
 				{
 					test: /\.styl$|\.css$/,
-					use: ["style-loader", {loader: MiniCssExtractPlugin.loader, options: {publicPath: paths + '/prod/static/styles/'}}, "css-loader", "stylus-relative-loader"],
+					use: [
+                        "style-loader",
+                        MiniCssExtractPlugin.loader,
+                        "css-loader",
+                        "stylus-relative-loader"
+                    ],
 					exclude: /node_modules/
 				}
             ]
         },
         plugins: [
-            new MiniCssExtractPlugin({filename: "styles.css"})
+            new MiniCssExtractPlugin({filename: "static/styles/styles.css"})
         ]
     }
 };

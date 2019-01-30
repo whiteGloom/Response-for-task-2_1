@@ -1,0 +1,23 @@
+body {
+  background-color: #fff;
+  margin: 0;
+}
+
+.site-content {
+  padding: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrap {
+  background-color: #ff0;
+  display: flex;
+  height: 200px;
+}
+.wrap_side_left {
+  width: 37%;
+}
+.wrap_side_right {
+  width: 57%;
+}
+
