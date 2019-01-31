@@ -13,8 +13,12 @@
 */
 
 import "./views/index.pug";
-import "./BEM/base.styl";
-import "./BEM/site-content/site-content.styl";
-import "./BEM/wrap/wrap.styl";
 
-//require.context(directory, useSubdirectories = false, regExp = /^\.\//);
+var cache = {};
+
+function importAll (r) {
+  r.keys().forEach(key => cache[key] = r(key));
+}
+
+importAll(require.context("./static/styles/", true, /\.styl$/));
+importAll(require.context("./static/fonts/", true, /\.otf$|\.ttf$|\.woff$|\.svg$|\.eot$/));

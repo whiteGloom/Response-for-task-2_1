@@ -12,14 +12,16 @@ module.exports = function(paths) {
 					loader: "file-loader",
 				    options: {
 				      	outputPath: 'static/images',
+				      	name: '[name].[ext]'
 				    },
 					exclude: /node_modules/
 				},
 				{
-					test:  /\.woff$|\.otf$|\.ttf$/,
+					test:  /\.woff$|\.otf$|\.ttf$|\.eot$/,
 					loader: "file-loader",
 				    options: {
 				      	outputPath: 'static/fonts',
+				      	name: '[name].[ext]'
 				    },
 					exclude: /node_modules/
 				}

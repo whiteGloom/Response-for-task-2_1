@@ -1,7 +1,48 @@
+@font-face {
+  font-family: Myriad-Pro;
+  src: url(static/fonts/Myriad-Pro.otf) format("opentype"), url(static/fonts/Myriad-Pro.eot?) format("eot"), url(static/fonts/Myriad-Pro.ttf) format("truetype"), url(static/fonts/Myriad-Pro.woff) format("woff"), url(static/images/Myriad-Pro.svg) format("svg");
+}
+@font-face {
+  font-family: Myriad-Pro-bold;
+  src: url(static/fonts/Myriad-Pro-Bold.otf) format("opentype"), url(static/fonts/Myriad-Pro-Bold.eot?) format("eot"), url(static/fonts/Myriad-Pro-Bold.ttf) format("truetype"), url(static/fonts/Myriad-Pro-Bold.woff) format("woff"), url(static/images/Myriad-Pro-Bold.svg) format("svg");
+}
+@font-face {
+  font-family: Myriad-Pro-LightSemiExt;
+  src: url(static/fonts/Myriad-Pro-LightSemiExt.eot) format("eot?#"), url(static/fonts/Myriad-Pro-LightSemiExt.ttf) format("truetype"), url(static/fonts/Myriad-Pro-LightSemiExt.woff) format("woff"), url(static/images/Myriad-Pro-LightSemiExt.svg) format("svg");
+}
+html {
+  font-size: 14px;
+  font-family: Myriad-Pro;
+}
 body {
   background-color: #fff;
   margin: 0;
 }
+
+.em_size_career {
+  font-size: 0.6rem;
+}
+
+
+
+.em_style_normal {
+  font-style: normal;
+}
+
+.em_transf_up {
+  text-transform: uppercase;
+}
+
+.em_weight_bold {
+  font-weight: bold;
+}
+
+
+
+
+
+
+
 
 .site-content {
   padding: 5%;
@@ -9,15 +50,17 @@ body {
   justify-content: space-between;
 }
 
+.wrap_side_left {
+  width: 37%;
+}
+
+.wrap_side_right {
+  width: 57%;
+}
+
 .wrap {
   background-color: #ff0;
   display: flex;
   height: 200px;
-}
-.wrap_side_left {
-  width: 37%;
-}
-.wrap_side_right {
-  width: 57%;
 }
 
