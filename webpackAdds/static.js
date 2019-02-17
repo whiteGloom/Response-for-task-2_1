@@ -8,7 +8,7 @@ module.exports = function(paths) {
         module: {
             rules: [
 				{
-					test:  /\.jpe?g$|\.gif$|\.png$|\.svg$/,
+					test:  /\.(jpe?g|gif|png|svg)/,
 					loader: "file-loader",
 				    options: {
 				      	outputPath: 'static/images',
@@ -17,7 +17,7 @@ module.exports = function(paths) {
 					exclude: /node_modules/
 				},
 				{
-					test:  /\.woff$|\.otf$|\.ttf$|\.eot$/,
+					test:  /\.(woff|otf|ttf|eot)/,
 					loader: "file-loader",
 				    options: {
 				      	outputPath: 'static/fonts',
