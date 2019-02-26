@@ -50,14 +50,13 @@ b {
   width: auto;
 }
 
-.contacts__el_first {
-  margin-top: 4.5rem;
-}
-
 .contacts__el {
   margin-top: 6rem;
   display: flex;
   justify-content: space-between;
+}
+.contacts__el:first-child {
+  margin-top: 4.5rem;
 }
 
 .contacts__key {
@@ -78,6 +77,7 @@ b {
 .em_style_normal {
   font-style: normal;
 }
+
 
 @font-face {
   font-family: Myriad-Pro;
@@ -209,7 +209,7 @@ h1 {
 
 .list__el {
   position: relative;
-  margin-top: 2rem;
+  margin-top: 2.25rem;
 }
 .list__el:first-child {
   margin-top: 3rem;
@@ -252,30 +252,19 @@ h1 {
   line-height: 3.75rem;
 }
 
-.preview__el_last {
-  margin-bottom: 7.5%;
-}
-
-.preview__el_type_image {
+.preview__imageBlock {
   width: 57.75%;
-}
-
-.preview__el_type_text-block {
-  text-align: center;
-}
-
-.preview__el {
   margin: 6.5% auto 0 auto;
-}
-
-.preview__text_type_career {
-  font-size: 5rem;
-  font-family: Myriad-Pro-Bold;
 }
 
 .preview__text_type_name {
   font-size: 10.5rem;
   font-family: Myriad-Pro-LightSemiExt;
+}
+
+.preview__text_type_profession {
+  font-size: 5rem;
+  font-family: Myriad-Pro-Bold;
 }
 
 .preview__text_type_surname {
@@ -290,6 +279,11 @@ h1 {
   font-style: normal;
 }
 
+.preview__textBlock {
+  text-align: center;
+  margin: 6.5% auto 7.5% auto;
+}
+
 .preview {
   padding-left: 2.9rem;
   overflow: hidden;
@@ -297,6 +291,8 @@ h1 {
 
 .rate__el_type_dotted {
   margin-top: 4.25rem;
+  padding: 0 11.5% 0 10.5%;
+  text-align: center;
 }
 .rate__el_type_dotted:first-child {
   margin-top: 3rem;
@@ -327,6 +323,15 @@ h1 {
 
 .rate__title {
   font-size: 5rem;
+  font-family: Myriad-pro;
+}
+
+.rate__value_color_gray {
+  background-color: #e6e6e6;
+}
+
+.rate__value_color_lightblue {
+  background-color: #3f6fb6;
 }
 
 .rate__value_type_dotted {
@@ -338,20 +343,6 @@ h1 {
 
 .rate__value_type_linear {
   height: 4.5rem;
-}
-
-.rate__value_color_gray {
-  background-color: #e6e6e6;
-}
-
-.rate__value_color_lightblue {
-  background-color: #3f6fb6;
-}
-
-
-.rate_type_dotted {
-  padding: 0 11.5% 0 10.5%;
-  text-align: center;
 }
 
 

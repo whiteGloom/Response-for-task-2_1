@@ -1,0 +1,21 @@
+mixin rateMix()
+	.rate
+		if block
+			block
+
+mixin rateElMix(title, type, value)
+	if type == 'dotted'
+		- var filled = Math.round((value * 12)/100)
+		.rate__el.rate__el_type_dotted(data-value=value + '%')
+			h2.rate__title=title
+			.rate__field.rate__field_type_dotted
+				- for(var i=0; i < filled; i++)
+					.rate__value.rate__value_type_dotted.rate__value_color_lightblue
+				- for(var i=0; i < 12 - filled; i++)
+					.rate__value.rate__value_type_dotted.rate__value_color_gray
+
+	if type == 'linear'
+		.rate__el.rate__el_type_linear(data-value=value + '%')
+			h2.rate__title=title
+			.rate__field.rate__field_type_linear
+				.rate__value.rate__value_type_linear.rate__value_color_lightblue(style="width:" + value + '%')

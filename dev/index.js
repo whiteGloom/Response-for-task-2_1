@@ -12,13 +12,13 @@
 	-whiteGloom
 */
 
-import "./views/index.pug";
-
 var cache = {};
 
 function importAll (r) {
   r.keys().forEach(key => cache[key] = r(key));
 }
 
-importAll(require.context("./static/styles/", true, /\.styl$/));
+
+import "./views/index.pug";
+importAll(require.context("./static/BEM/", true, /\.styl$/));
 importAll(require.context("./static/fonts/", true, /\.otf$|\.ttf$|\.woff$|\.svg$|\.eot$/));

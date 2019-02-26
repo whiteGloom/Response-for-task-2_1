@@ -1,0 +1,9 @@
+mixin previewMix(name, surname, profession)
+	.preview
+		.preview__imageBlock
+			if block
+				block
+		.preview__textBlock
+			em.preview__text.preview__text_type_name= name
+			em.preview__text.preview__text_type_surname= surname
+			em.preview__text.preview__text_type_profession= profession

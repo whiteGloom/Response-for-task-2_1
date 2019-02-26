@@ -1,0 +1,14 @@
+mixin wrapMix()
+	.wrap(class=attributes.class)
+		if block
+			block
+
+mixin wrapElMix(offset)
+	if offset
+		.wrap__el.wrap__el_offset
+			if block
+				block
+	else
+		.wrap__el
+			if block
+				block

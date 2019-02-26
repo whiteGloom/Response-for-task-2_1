@@ -1,0 +1,17 @@
+mixin blockMix(title, image)
+	.block
+		if title || image
+			.block__header
+				.block__icon.image
+					.image__stroke
+						.image__background
+							img.image__picture(src=image)
+				h1.block__title= title
+				.block__decorLine
+		if block
+			block
+
+mixin blockElMix()
+	if block
+		.block__el
+			block
