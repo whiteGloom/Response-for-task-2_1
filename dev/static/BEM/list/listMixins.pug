@@ -1,18 +1,22 @@
-mixin listMix()
+mixin listMix(options)
 	ul.list
 		if block
 			block
 
-mixin listElMix(majorTitle, date, minorTitle, color)
+mixin listElMix(options)
+	-
+		var options 	= options ? options : {};
+		var majorTitle 	= options.majorTitle ? options.majorTitle : 'major title',
+			date 		= options.date,
+			minorTitle 	= options.minorTitle,
+			color 		= options.color;
 	li.list__el
 		.list__header
-			if !color
-				h2.list__majorTitle= majorTitle
-			else 
-				if color == 'lightblue'
-					h2.list__majorTitle.list__majorTitle_color_lightblue= majorTitle
-			em.list__date= date
-			em.list__minorTitle= minorTitle
+			h2.list__majorTitle(class='' + (color ? ' list__majorTitle_color_' + color : ''))= majorTitle
+			if date
+				em.list__date= date
+			if minorTitle
+				em.list__minorTitle= minorTitle
 		if block
 			.list__content
 				block

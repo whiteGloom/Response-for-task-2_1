@@ -1,9 +1,16 @@
-mixin previewMix(name, surname, profession)
+mixin previewMix(options)
+	-
+		var options		= options ? options : {};
+		var name		= options.name ? options.name : 'name',
+			surname		= options.surname,
+			profession	= options.profession;
 	.preview
 		.preview__imageBlock
 			if block
 				block
 		.preview__textBlock
 			em.preview__text.preview__text_type_name= name
-			em.preview__text.preview__text_type_surname= surname
-			em.preview__text.preview__text_type_profession= profession
+			if surname
+				em.preview__text.preview__text_type_surname= surname
+			if profession
+				em.preview__text.preview__text_type_profession= profession

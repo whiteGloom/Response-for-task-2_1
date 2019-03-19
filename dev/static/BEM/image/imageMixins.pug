@@ -1,5 +1,14 @@
-mixin imageMix(src)
+mixin imageMix(options)
+	-
+		var options = options ? options : {};
+		var src 	= options.src ? options.src : '',
+			type	= options.type ? options.type : 'image',
+			icon 	= options.icon ? options.icon : undefined;
 	.image
 		.image__stroke
 			.image__background
-				img.image__picture(src=src)
+				case type
+					when 'image'
+						img.image__picture(src=src)
+					when 'icon'
+						.image__picture(class='' + (icon ? ' image__picture_icon_' + icon : ''))

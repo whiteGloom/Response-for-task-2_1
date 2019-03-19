@@ -9,93 +9,108 @@ html
 	body
 		.base
 			// Левая колонка сайта
-			.wrap.wrap_ident_mainLeft
+			+wrapMix({ident: 'mainLeft'})
 				// Блок Preview
-				+wrapElMix(true)
-					+blockMix()
+				+wrapElMix({offset: true})
+					+blockMix
 						+blockElMix
-							+previewMix('Evgeniy', 'Miller', 'noname')
-								+imageMix(require("../static/images/myLogo.png"))
+							+previewMix({name: 'Evgeniy', surname: 'Miller', profession: 'noname'})
+								+imageMix({src: require('../static/images/myLogo.png')})
 				// Блок Profile
-				+wrapElMix(true)
-					+blockMix('profile', require("../static/images/manIcon.png"))
+				+wrapElMix({offset: true})
+					+blockMix
+						+blockHeaderMix({title: 'profile'})
+							+imageMix({type: 'icon', icon: 'man'})
 						+blockElMix
-							p.p
+							+pMix
 								| Привет. Это должен быть блок с простым текстом.. Ну, раз уж разрешили писать про себя, то почему бы и не воспользоваться возможностью, правильно?
-								br
+							+pMix
 								| Итак... Евгеша, 17 годиков, Северск. Учусь в 11 классе, веду никому не нужный канал на YouTube, периодически рисую, читаю, часто лезу в графику, иногда в 3D и так далее.. Всё как обычно. Хочу в Канаду.
-								br
+							+pMix
 								b С фронтендом познакомился, когда решил сделать сайт для канала (года 2-3 назад). Активно влез сюда относительно недавно. Пока сижу на уровне джуна.
-								br
-								|
+							+pMix
 								| Если вкратце, то всё.
 				// Блок Contact
-				+wrapElMix(true)
-					+blockMix('contact', require("../static/images/handsetIcon.png"))
+				+wrapElMix({offset: true})
+					+blockMix
+						+blockHeaderMix({title: 'contact'})
+							+imageMix({type: 'icon', icon: 'handset'})
 						+blockElMix
 							+contactsMix
-								+contactsElMix('adress')
-									em.em.em_style_normal Kalinina, Seversk
-								+contactsElMix('email')
-									em.em.em_style_normal karabin.m@yandex.ru
-								+contactsElMix('phone')
-									em.em.em_style_normal +7-952-153-84-08
-								+contactsElMix('website')
-									em.em.em_style_normal development paused
+								+contactsElMix({title: 'adress'})
+									+emMix({style: 'normal'})
+										| Kalinina, Seversk
+								+contactsElMix({title: 'email'})
+									+emMix({style: 'normal'})
+										| karabin.m@yandex.ru
+								+contactsElMix({title: 'phone'})
+									+emMix({style: 'normal'})
+										| +7-952-153-84-08
+								+contactsElMix({title: 'website'})
+									+emMix({style: 'normal'})
+										| development paused
 				// Блок Skills
-				+wrapElMix(true)
-					+blockMix('skills', require("../static/images/bulbIcon.png"))
+				+wrapElMix({offset: true})
+					+blockMix
+						+blockHeaderMix({title: 'skills'})
+							+imageMix({type: 'icon', icon: 'bulb'})
 						+blockElMix
-							+rateMix('dotted')
-								+rateElMix('creative', 'dotted', 75)
-								+rateElMix('teamwork', 'dotted', 80)
-								+rateElMix('innovate', 'dotted', 70)
-								+rateElMix('communication', 'dotted', 75)
+							+rateMix
+								+rateElMix({title: 'creative', type: 'dotted', value: 75})
+								+rateElMix({title: 'teamwork', type: 'dotted', value: 80})
+								+rateElMix({title: 'innovate', type: 'dotted', value: 70})
+								+rateElMix({title: 'communication', type: 'dotted', value: 75})
 			// Правая колонка сайта
-			.wrap.wrap_ident_mainRight
+			+wrapMix({ident: 'mainRight'})
 				// Блок Education
-				+wrapElMix(true)
-					+blockMix('education', require("../static/images/starIcon.png"))
+				+wrapElMix({offset: true})
+					+blockMix
+						+blockHeaderMix({title: 'education'})
+							+imageMix({type: 'icon', icon: 'star'})
 						+blockElMix
 							+listMix
-								+listElMix('1 to 5 classes', 'Sep 2007 - May 2012', '25 School', 'lightblue')
-									p.p
+								+listElMix({majorTitle: '1 to 5 classes', date: 'Sep 2007 - May 2012', minorTitle: '25 School', color: 'lightblue'})
+									+pMix
 										| Вышки нет, поэтому будет то, что есть. 1 - 5 классы, первая школа, учился здесь пока жил ещё в томске.
-								+listElMix('6 to 9 classes', 'Sep 2012 - May 2017', '81 School', 'lightblue')
-									p.p
+								+listElMix({majorTitle: '6 to 9 classes', date: 'Sep 2012 - May 2017', minorTitle: '81 School', color: 'lightblue'})
+									+pMix
 										| Среднее неполное образование, жил уже в Северске.
-								+listElMix('10 to 11 classes', 'Sep 2017 - Now', '81 School', 'lightblue')
-									p.p
+								+listElMix({majorTitle: '10 to 11 classes', date: 'Sep 2017 - Now', minorTitle: '81 School', color: 'lightblue'})
+									+pMix
 										| Последний рывок, последние два класса в физмат профиле до полного среднего.
 				// Блок Experience
-				+wrapElMix(true)
-					+blockMix('experience', require("../static/images/packageIcon.png"))
+				+wrapElMix({offset: true})
+					+blockMix
+						+blockHeaderMix({title: 'experience'})
+							+imageMix({type: 'icon', icon: 'package'})
 						+blockElMix
 							+listMix
-								+listElMix('lKl official', 'Oct 2014 - Aug 2018', 'Host')
-									p.p
+								+listElMix({majorTitle: 'lKl official', date: 'Oct 2014 - Aug 2018', minorTitle: 'Host'})
+									+pMix
 										| Опять же - я ещё нигде не работал, так что будут хобби-проекты. lKl - Mr&nbsplKlAlRlAlBlIlNl - преимущественно YouTube проект, на котором я выпускал видосики по играм, пробовал делать переводы и т.п.. 
 										br
 										| Именнно этот проект сподвигнул меня познакомиться с Frontend'м.  
-								+listElMix('White Gloom', 'Aug 2018 - Now', 'Host')
-									p.p
+								+listElMix({majorTitle: 'White Gloom', date: 'Aug 2018 - Now', minorTitle: 'Host'})
+									+pMix
 										| Mr lKlAlRlAlBlIlNl морально устарел, и на смену ему пришёл новый проект - White&nbspGloom. Проект отличается начинкой и целевой аудиторией - проект полностью отдан творчеству и хобби.
-										br
+									+pMix
 										| Для проекта также разрабатывается сайт, но сейчас разработка на паузе (в угоду курсу).
 				// Блок Software
-				+wrapElMix(true)
-					+blockMix('software', require("../static/images/computerIcon.png"))
+				+wrapElMix({offset: true})
+					+blockMix
+						+blockHeaderMix({title: 'software'})
+							+imageMix({type: 'icon', icon: 'computer'})
 						+blockElMix
-							.splitter
-								.wrap.wrap_ident_rate
+							+splitterMix
+								+wrapMix({ident: 'rate'})
+									+wrapElMix({offset: true})
+										+rateMix
+											+rateElMix({title: 'photoshop', type: 'linear', value: 90})
+											+rateElMix({title: 'illustrator', type: 'linear', value: 20})
+											+rateElMix({title: 'indesign', type: 'linear', value: 0})
+								+wrapMix({ident: 'rate'})
 									+wrapElMix
 										+rateMix
-											+rateElMix('photoshop', 'linear', 90)
-											+rateElMix('illustrator', 'linear', 20)
-											+rateElMix('indesign', 'linear', 0)
-								.wrap.wrap_ident_rate
-									+wrapElMix
-										+rateMix
-											+rateElMix('dreamweaver', 'linear', 20)
-											+rateElMix('after effects', 'linear', 75)
-											+rateElMix('html&css3', 'linear', 80)
+											+rateElMix({title: 'dreamweaver', type: 'linear', value: 20})
+											+rateElMix({title: 'after effects', type: 'linear', value: 75})
+											+rateElMix({title: 'html&css3', type: 'linear', value: 80})

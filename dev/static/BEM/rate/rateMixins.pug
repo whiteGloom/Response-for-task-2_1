@@ -1,21 +1,25 @@
-mixin rateMix()
+mixin rateMix(options)
+	-
+		var options = options ? options : {};
 	.rate
 		if block
 			block
 
-mixin rateElMix(title, type, value)
-	if type == 'dotted'
-		- var filled = Math.round((value * 12)/100)
-		.rate__el.rate__el_type_dotted(data-value=value + '%')
-			h2.rate__title=title
-			.rate__field.rate__field_type_dotted
-				- for(var i=0; i < filled; i++)
-					.rate__value.rate__value_type_dotted.rate__value_color_lightblue
-				- for(var i=0; i < 12 - filled; i++)
-					.rate__value.rate__value_type_dotted.rate__value_color_gray
-
-	if type == 'linear'
-		.rate__el.rate__el_type_linear(data-value=value + '%')
-			h2.rate__title=title
-			.rate__field.rate__field_type_linear
-				.rate__value.rate__value_type_linear.rate__value_color_lightblue(style="width:" + value + '%')
+mixin rateElMix(options)
+	-
+		var options = options ? options : {};
+		var title 	= options.title ? options.title : 'title',
+			type 	= options.type ? options.type : 'linear',
+			value 	= options.value ? options.value : 50;
+	.rate__el(data-value=value + '%' class='' + (' rate__el_type_' + type))
+		h2.rate__title=title
+		.rate__field(class='' + (' rate__field_type_' + type))
+			case type
+				when 'dotted'
+					- var filled = Math.round((value * 12)/100);
+					- for(var i=0; i < filled; i++)
+						.rate__value.rate__value_color_lightblue(class='' + (' rate__value_type_' + type))
+					- for(var i=0; i < 12 - filled; i++)
+						.rate__value.rate__value_color_gray(class='' + (' rate__value_type_' + type))
+				when 'linear'
+					.rate__value.rate__value_color_lightblue(style='width:' + value + '%' class='' + (' rate__value_type_' + type))

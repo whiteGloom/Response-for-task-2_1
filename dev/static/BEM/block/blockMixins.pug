@@ -1,17 +1,24 @@
-mixin blockMix(title, image)
+mixin blockMix(options)
+	-
+		var options = options ? options : {};
 	.block
-		if title || image
-			.block__header
-				.block__icon.image
-					.image__stroke
-						.image__background
-							img.image__picture(src=image)
-				h1.block__title= title
-				.block__decorLine
 		if block
 			block
 
-mixin blockElMix()
+mixin blockHeaderMix(options)
+	-
+		var options = options ? options : {};
+		var title 	= options.title ? options.title : 'title';
+	.block__header
+		.block__icon
+			if block
+				block
+		h1.block__title= title
+		.block__decorLine
+
+mixin blockElMix(options)
+	-
+		var options = options ? options : {};
 	if block
 		.block__el
 			block

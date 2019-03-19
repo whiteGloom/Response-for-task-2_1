@@ -1,10 +1,16 @@
-mixin contactsMix()
+mixin contactsMix(options)
+	-
+		var options = options ? options : {};
 	.contacts
 		if block
 			block
 
-mixin contactsElMix(key)
+mixin contactsElMix(options)
+	-
+		var options = options ? options : {};
+		var title 	= options.title ? options.title : 'title';
 	.contacts__el
-		em.contacts__key=key
+		em.contacts__title=title
 		.contacts__value
-			block
+			if block
+				block
