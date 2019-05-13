@@ -1,0 +1,12 @@
+mixin iconMix(options)
+	-
+		var options = options ? options : {};
+		var src 	= options.src ? options.src : '',
+			type	= options.type ? options.type : 'image';
+	.icon&attributes(attributes)
+		.image__outer
+			case type
+				when 'image'
+					img.icon__image(src=src)
+				when 'icon'
+					.icon__image(style='background-image: url(' + src + ')')

@@ -4,13 +4,13 @@ mixin previewMix(options)
 		var name		= options.name ? options.name : 'name',
 			surname		= options.surname,
 			profession	= options.profession;
-	.preview
-		.preview__imageBlock
+	.preview&attributes(attributes)
+		.preview__image
 			if block
 				block
-		.preview__textBlock
-			em.preview__text.preview__text_type_name= name
+		.preview__infoBox
+			em.preview__info.preview__info_type_name= name
 			if surname
-				em.preview__text.preview__text_type_surname= surname
+				em.preview__info.preview__info_type_surname= surname
 			if profession
-				em.preview__text.preview__text_type_profession= profession
+				em.preview__info.preview__info_type_profession= profession

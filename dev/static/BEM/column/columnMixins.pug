@@ -1,0 +1,14 @@
+mixin columnMix(options)
+	-
+		var options = options ? options : {};
+		var side = options.side ? options.side : 'left';
+	section.column(class='' + (' column_side_' + side))&attributes(attributes)
+		if block
+			block
+
+mixin columnSectionMix(options)
+	-
+		var options = options ? options : {};
+	section.column__section&attributes(attributes)
+		if block
+			block

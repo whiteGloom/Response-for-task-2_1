@@ -2,6 +2,6 @@ mixin emMix(options)
 	-
 		var options = options ? options : {};
 		var style = options.style;
-	em.em(class='' + (style ? ' em_style_' + style : ''))
+	em.em(class='' + (style ? ' em_style_' + style : ''))&attributes(attributes)
 		if block
 			block

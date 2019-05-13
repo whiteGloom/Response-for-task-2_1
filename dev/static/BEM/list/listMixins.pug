@@ -1,5 +1,5 @@
 mixin listMix(options)
-	ul.list
+	ul.list&attributes(attributes)
 		if block
 			block
 
@@ -9,14 +9,14 @@ mixin listElMix(options)
 		var majorTitle 	= options.majorTitle ? options.majorTitle : 'major title',
 			date 		= options.date,
 			minorTitle 	= options.minorTitle,
-			color 		= options.color;
-	li.list__el
-		.list__header
-			h2.list__majorTitle(class='' + (color ? ' list__majorTitle_color_' + color : ''))= majorTitle
+			titleColor 	= options.titleColor ? options.titleColor: 'black';
+	li.list__el&attributes(attributes)
+		.list__elHeader
+			h2.list__elMajorTitle(style="color: " + titleColor)= majorTitle
 			if date
-				em.list__date= date
+				em.list__elDate= date
 			if minorTitle
-				em.list__minorTitle= minorTitle
-		if block
-			.list__content
+				em.list__elMinorTitle= minorTitle
+		.list__elContent
+			if block
 				block
