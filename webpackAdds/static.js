@@ -1,9 +1,9 @@
 /*
     Файл с инструкциями для обработки статики ( изображений, векторов, шрифтов и т.п. ).
-    Добавляет в список обработчиков лоадер сборщика для статики и папку для неё ( по умолчанию выводится по пути, указанном в output ).
 */
 
-module.exports = function(paths) {
+module.exports = function(options) {
+    var options = options ? options : {};
     return {
         module: {
             rules: [
@@ -14,7 +14,7 @@ module.exports = function(paths) {
 				      	outputPath: 'static/images',
 				      	name: '[name].[ext]'
 				    },
-					exclude: /node_modules/
+					exclude: /[\\/](node_modules|fonts)[\\/]/
 				},
 				{
 					test:  /\.(woff|otf|ttf|eot)/,
@@ -23,7 +23,25 @@ module.exports = function(paths) {
 				      	outputPath: 'static/fonts',
 				      	name: '[name].[ext]'
 				    },
-					exclude: /node_modules/
+					exclude: /[\\/]node_modules[\\/]/
+				},
+				{
+					test:  /\.svg$/,
+					loader: "file-loader",
+				    options: {
+				      	outputPath: 'static/fonts',
+				      	name: '[name].[ext]'
+				    },
+					include: /[\\/]fonts[\\/]/
+				},
+				{
+					test:  /\.mp4$/,
+					loader: "file-loader",
+				    options: {
+				      	outputPath: 'static/videos',
+				      	name: '[name].[ext]'
+				    },
+					include: /[\\/]videos[\\/]/
 				}
             ]
         }

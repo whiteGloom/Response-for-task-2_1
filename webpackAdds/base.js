@@ -1,18 +1,19 @@
 /*
     Файл с основной информацией.
-    Указывает:
-    * - входной файл с поключаемыми файлами;
-    * - путь и имя для выходного файла;
-    * - поля для оперативного встраивания ( на всякий случай );
 */
 
-module.exports = function(paths) {
+module.exports = function(options) {
+    var options = options ? options : {};
+    var base = options.base;
 	return {
 		mode: 'development',
-		entry: paths + "/dev/index.js",
+		entry: {
+			'base': base + '/dev/index.js',
+			'static': base + '/dev/static.js'
+		},
 		output: {
-			path: paths + "/prod/",
-			filename: "scripts.js"
+			path: base + '/prod/',
+			filename: 'scripts/[name].js'
 		},
 	    module: {
 	        rules: [
@@ -20,8 +21,23 @@ module.exports = function(paths) {
 	        ]
 	    },
 	    plugins: [
-
-	    ]
+	    
+	    ],
+	    optimization: {
+    		splitChunks: {
+				cacheGroups: {
+					commons: {
+						name: 'vendors',
+						chunks: 'all',
+						test: /[\\/]jsPlugins[\\/]/,
+					}
+				}
+			}
+		},
+	    resolve : {
+	    	
+	    },
+	    devtool: 'none'
 	}
 }
 

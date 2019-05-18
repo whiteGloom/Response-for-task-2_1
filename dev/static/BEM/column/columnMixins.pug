@@ -1,3 +1,7 @@
+//- Миксин создаёт колонку страницы. Свойства:
+//- 'side' (string) ['left', 'right'] - сторона колонки. По умолчанию - 'left'.
+//- Ожидается любое содержимое.
+
 mixin columnMix(options)
 	-
 		var options = options ? options : {};
@@ -6,6 +10,8 @@ mixin columnMix(options)
 		if block
 			block
 
+//- Миксин создаёт скецию колонки.
+//- Ожидается любое содержимое.
 mixin columnSectionMix(options)
 	-
 		var options = options ? options : {};

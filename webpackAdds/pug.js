@@ -1,32 +1,27 @@
 /*
     Файл с инструкциями для обработки Pug файлов.
-    Добавляет:
-    	* - в список обработчиков:
-    		* - лоадер для 'Pug';
-    	* - в список плагинов:
-    		* - плагин для вывода HTML кода в отдельный файл;
-    		* - плагин для кастомной преттификации конечного HTML;
-
-   	Полные списки опций плагинов можно найти в их репозиториях.
 */
 
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const HtmlBeautifyPlugin = require('html-beautify-webpack-plugin');
 
-module.exports = function(paths) {
+module.exports = function(options) {
+    var options = options ? options : {};
+    var base = options.base;
     return {
         module: {
             rules: [
 				{
-				    test: /\.pug$/,
+				    test: /\.(pug|html)/,
 				    loader: 'pug-loader',
-					exclude: /node_modules/
+					exclude: /[\\/]node_modules[\\/]/
 				}
             ]
         },
         plugins: [
 			new HTMLWebpackPlugin({
-				template: paths + "/dev/views/index.pug",
+				template: base + "/dev/views/index.pug",
+				filename: 'index.html',
 				inject: false,												// Параметр, отключающий включение в конечный HTML ссылок на собранные файлы CSS, JS и т.д.
 				minify: false												// Параметр, отключающий минификацию конечного HTML
 			}),

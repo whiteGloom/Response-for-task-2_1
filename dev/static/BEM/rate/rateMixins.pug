@@ -1,3 +1,5 @@
+//- Миксин создаёт блок рейтинга.
+//- Ожидается элемент райтинга.
 mixin rateMix(options)
 	-
 		var options = options ? options : {};
@@ -5,12 +7,16 @@ mixin rateMix(options)
 		if block
 			block
 
+//- Миксин создаёт элемент рейтинга. Свойства:
+//- 'title' (string) -  заголовок элемента. По умолчанию - 'title'.
+//- 'type' (string) ['linear', 'dotted'] - тип рейтинга. По умолчанию - 'linear'. 
+//- 'value' (number) - значение элемента. По умолчанию - 50.
 mixin rateElMix(options)
 	-
 		var options = options ? options : {};
 		var title 	= options.title ? options.title : 'title',
 			type 	= options.type ? options.type : 'linear',
-			value 	= options.value ? options.value : '50';
+			value 	= options.value ? options.value : 50;
 	.rate__el(data-value=value + '%' class='' + (' rate__el_type_' + type))&attributes(attributes)
 		em.rate__elTitle=title
 		.rate__elValueBox(class='' + (' rate__elValueBox_type_' + type))

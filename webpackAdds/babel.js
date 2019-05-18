@@ -1,17 +1,17 @@
 /*
     Файл с инструкциями для обработки JS файлов.
-    Добавляет в список обработчиков лоадер сборщика 'Babel'
 */
 
-module.exports = function(paths) {
+module.exports = function(options) {
+    var options = options ? options : {};
     return {
         module: {
             rules: [
-				{
-					test: /\.js$/,
-					loader: "babel-loader",
-					exclude: /node_modules/
-				}
+                {
+                    test: /\.(js)/,
+                    loader: "babel-loader",
+                    exclude: /[\\/]node_modules[\\/]/
+                }
             ]
         }
     }

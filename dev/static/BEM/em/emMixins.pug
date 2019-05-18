@@ -1,7 +1,13 @@
+
+//- Миксин создаёт акцентированный текст. Свойства:
+//- 'style' (string) ['normal', 'italic'] - стиль начертания текста. По умолчнию - 'italic'.
+//- 'text' (string / nothing) - текст. По умолчнию - ''.
+//-Ожидается текст или ничего.
 mixin emMix(options)
 	-
 		var options = options ? options : {};
-		var style = options.style;
-	em.em(class='' + (style ? ' em_style_' + style : ''))&attributes(attributes)
+		var style = options.style ? options.style : 'italic',
+			text = options.text ? options.text : '';
+	em.em(class='' + (' em_style_' + style))&attributes(attributes)= text
 		if block
 			block

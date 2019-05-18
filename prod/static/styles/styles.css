@@ -66,6 +66,10 @@
 }
 
 
+.em_style_italic {
+  font-style: italic;
+}
+
 .em_style_normal {
   font-style: normal;
 }
@@ -84,7 +88,7 @@
   src: url("../fonts/Myriad-Pro-LightSemiExt.eot") format("eot?#"), url("../fonts/Myriad-Pro-LightSemiExt.ttf") format("truetype"), url("../fonts/Myriad-Pro-LightSemiExt.woff") format("woff"), url("../images/Myriad-Pro-LightSemiExt.svg") format("svg");
 }
 html {
-  font-size: 7.41pt /* 7.41 */;
+  font-size: 7.41pt;
   font-family: Myriad-Pro;
   color: #000;
 }
@@ -244,43 +248,6 @@ b {
   line-height: 3.75rem;
 }
 
-.preview__image {
-  width: 57.75%;
-  margin: 6.5% auto 0 auto;
-}
-
-.preview__info_type_name {
-  font-size: 10.5rem;
-  font-family: Myriad-Pro-LightSemiExt;
-}
-
-.preview__info_type_profession {
-  font-size: 5rem;
-  font-family: Myriad-Pro-Bold;
-}
-
-.preview__info_type_surname {
-  margin-top: -3.9rem;
-  font-size: 12.4rem;
-  font-family: Myriad-Pro-Bold;
-}
-
-.preview__info {
-  display: block;
-  text-transform: uppercase;
-  font-style: normal;
-}
-
-.preview__infoBox {
-  text-align: center;
-  margin: 6.5% auto 7.5% auto;
-}
-
-.preview {
-  padding-left: 2.9rem;
-  overflow: hidden;
-}
-
 .rate__el_type_dotted {
   margin-top: 4.25rem;
   padding: 0 11.5% 0 10.5%;
@@ -333,11 +300,9 @@ b {
 
 
 .title__decorline {
-  height: 1rem;
   width: 100%;
   flex-shrink: 1;
-  border: 0;
-  background-color: #3d6cb0;
+  border: 0.6rem solid #3d6cb0;
 }
 
 .title__icon {
@@ -360,30 +325,68 @@ b {
 }
 
 
-.wrapper_centering {
+.user__image {
+  width: 57.75%;
+  margin: 6.5% auto 0 auto;
+}
+
+.user__info_type_name {
+  font-size: 10.5rem;
+  font-family: Myriad-Pro-LightSemiExt;
+}
+
+.user__info_type_profession {
+  font-size: 5rem;
+  font-family: Myriad-Pro-Bold;
+}
+
+.user__info_type_surname {
+  margin-top: -3.9rem;
+  font-size: 12.4rem;
+  font-family: Myriad-Pro-Bold;
+}
+
+.user__info {
+  display: block;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+.user__infoBox {
+  text-align: center;
+  margin: 6.5% auto 7.5% auto;
+}
+
+.user {
+  padding-left: 2.9rem;
+  overflow: hidden;
+}
+
+.wrapper__el_centering {
   margin-left: auto;
   margin-right: auto;
 }
 
-.wrapper_justify_around {
+.wrapper__el_justify_around {
   justify-content: space-around;
   display: flex;
 }
 
-.wrapper_justify_between {
+.wrapper__el_justify_between {
   justify-content: space-between;
   display: flex;
 }
 
-.wrapper_justify_unset {
+.wrapper__el_justify_unset {
   display: block;
 }
 
-.wrapper {
+.wrapper__el {
   margin-top: 2.25rem;
   overflow: hidden;
 }
-.wrapper:first-of-type {
+.wrapper__el:first-child {
   margin-top: 0;
 }
+
 

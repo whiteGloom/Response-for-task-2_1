@@ -1,6 +1,10 @@
+//- Миксин создаёт параграф. Свойства:
+//- 'text' (string / nothing) - текст параграфа. По умолчанию - ''.
+//- Ожидается текст или ничего.
 mixin pMix(options)
 	-
-		var optios = options ? options : {};
-	p.p&attributes(attributes)
+		var options = options ? options : {};
+		var text 	= options.text ? options.text : '';
+	p.p&attributes(attributes)= text
 		if block
 			block

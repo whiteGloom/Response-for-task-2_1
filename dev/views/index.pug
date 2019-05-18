@@ -3,100 +3,113 @@ include ../static/BEM/mixinsList
 
 doctype html
 html
-	//- Подключение шапки
-	include /head/head.pug
-	// Тело сайта
+	// Шапка страницы
+	head
+		title resume
+		meta(charset="utf-8")
+		link(rel="stylesheet" type="text/css" href="static/styles/styles.css")
+		script(type="text/javascript" src="scripts.js")
+	// Тело страницы
 	body
 		main.base
-			// Левая колонка сайта
+			// Левая колонка страницы
 			+columnMix({side: 'left'})
 				// Блок Preview
 				+columnSectionMix
 					+wrapperMix
-						+previewMix({name: 'Evgeniy', surname: 'Miller', profession: 'noname'})
-							+iconMix({src: require('../static/images/myLogo.png')})
+						+wrapperElMix
+							+userMix({name: 'Evgeniy', surname: 'Miller', profession: 'noname'})
+								+iconMix({src: require('../static/images/myLogo.png')})
 				// Блок Profile
 				+columnSectionMix
 					+wrapperMix
-						+titleMix({text: 'profile'})
-							+iconMix({type: 'icon', src: require('../static/BEM/icon/images/manIcon.png')})
-					+wrapperMix
-						+pMix
-							| Привет. Это пример блока с простым текстом. И, раз уж разрешили писать про себя, то почему бы и не воспользоваться возможностью, правильно?
-						+pMix
-							| Итак.. Евгеша, 17 годиков, Северск. Заканчиваю 11 класс, веду никому не нужный канал на YouTube (что мне, кстати, нравится), периодически рисую, читаю, кручу педали, иногда лезу в 3D и так далее.. Всё как обычно. Хочу в Канаду (или в Норвегию).
-						+pMix
-							b С фронтендом познакомился, когда решил сделать сайт для канала (года 2-3 назад). Активно влез сюда относительно недавно. Джун (кто ж ещё?).
-						+pMix
-							| Если вкратце, то всё.
+						+wrapperElMix
+							+titleMix({text: 'profile'})
+								+iconMix({type: 'icon', src: require('../static/BEM/icon/images/manIcon.png')})
+						+wrapperElMix
+							+pMix
+								| Привет. Это пример блока с простым текстом. И, раз уж разрешили писать про себя, то почему бы и не воспользоваться возможностью, правильно?
+							+pMix
+								| Итак.. Евгеша, 17 годиков, Северск. Заканчиваю 11 класс, веду никому не нужный канал на YouTube (что мне, кстати, нравится), периодически рисую, читаю, кручу педали, иногда лезу в 3D и так далее.. Всё как обычно. Хочу в Канаду или в Норвегию (посмотрим).
+							+pMix
+								b С вебдевом познакомился, когда решил сделать сайт для канала (года 2-3 назад). Активно влез сюда относительно недавно.
+							+pMix
+								| Если вкратце, то всё.
 				// Блок Contact
 				+columnSectionMix
 					+wrapperMix
-						+titleMix({text: 'contact'})
-							+iconMix({type: 'icon', src: require('../static/BEM/icon/images/handsetIcon.png')})
-					+wrapperMix
-						+contactsMix
-							+contactsElMix({title: 'adress', value: 'Kalinina, Seversk'})
-							+contactsElMix({title: 'email', value: 'karabin.m@yandex.ru'})
-							+contactsElMix({title: 'phone', value: '+7-952-153-84-08'})
-							+contactsElMix({title: 'website', value: 'development paused'})
+						+wrapperElMix
+							+titleMix({text: 'contact'})
+								+iconMix({type: 'icon', src: require('../static/BEM/icon/images/handsetIcon.png')})
+						+wrapperElMix
+							+contactsMix
+								+contactsElMix({title: 'adress', value: 'Kalinina, Seversk'})
+								+contactsElMix({title: 'email', value: 'karabin.m@yandex.ru'})
+								+contactsElMix({title: 'phone', value: '+7-952-153-84-08'})
+								+contactsElMix({title: 'website', value: 'development paused'})
 				// Блок Skills
 				+columnSectionMix
 					+wrapperMix
-						+titleMix({text: 'skills'})
-							+iconMix({type: 'icon', src: require('../static/BEM/icon/images/bulbIcon.png')})
-					+wrapperMix
-						+rateMix
-							+rateElMix({title: 'creative', type: 'dotted', value: 75})
-							+rateElMix({title: 'teamwork', type: 'dotted', value: 80})
-							+rateElMix({title: 'innovate', type: 'dotted', value: 70})
-							+rateElMix({title: 'communication', type: 'dotted', value: 75})
-			// Правая колонка сайта
+						+wrapperElMix
+							+titleMix({text: 'skills'})
+								+iconMix({type: 'icon', src: require('../static/BEM/icon/images/bulbIcon.png')})
+						+wrapperElMix
+							+rateMix
+								+rateElMix({title: 'creative', type: 'dotted', value: 75})
+								+rateElMix({title: 'teamwork', type: 'dotted', value: 80})
+								+rateElMix({title: 'innovate', type: 'dotted', value: 70})
+								+rateElMix({title: 'communication', type: 'dotted', value: 75})
+			// Правая колонка страницы
 			+columnMix({side: 'right'})
 				// Блок Education
 				+columnSectionMix
 					+wrapperMix
-						+titleMix({text: 'education'})
-							+iconMix({type: 'icon', src: require('../static/BEM/icon/images/starIcon.png')})
-					+wrapperMix
-						+listMix
-							+listElMix({majorTitle: '1 to 5 classes', titleColor: '#3d6cb0', date: 'Sep 2007 - May 2012', minorTitle: '25 School', color: 'lightblue'})
-								+pMix
-									| Вышки нет, поэтому будет то, что есть. 1 - 5 классы, первая школа, учился здесь пока жил ещё в томске.
-							+listElMix({majorTitle: '6 to 9 classes', titleColor: '#3d6cb0', date: 'Sep 2012 - May 2017', minorTitle: '81 School', color: 'lightblue'})
-								+pMix
-									| Среднее неполное образование, жил уже в Северске.
-							+listElMix({majorTitle: '10 to 11 classes', titleColor: '#3d6cb0', date: 'Sep 2017 - May 2019', minorTitle: '81 School', color: 'lightblue'})
-								+pMix
-									| Последний рывок, последние два класса в физмат профиле до полного среднего.
+						+wrapperElMix
+							+titleMix({text: 'education'})
+								+iconMix({type: 'icon', src: require('../static/BEM/icon/images/starIcon.png')})
+						+wrapperElMix
+							+listMix
+								+listElMix({majorTitle: '1 to 5 classes', titleColor: '#3d6cb0', date: 'Sep 2007 - May 2012', minorTitle: '25 School', color: 'lightblue'})
+									+pMix
+										| Вышки нет, поэтому будет то, что есть. 1 - 5 классы, первая школа, учился здесь, пока ещё жил в томске.
+								+listElMix({majorTitle: '6 to 9 classes', titleColor: '#3d6cb0', date: 'Sep 2012 - May 2017', minorTitle: '81 School', color: 'lightblue'})
+									+pMix
+										| Среднее неполное образование, переезд в Северск.
+								+listElMix({majorTitle: '10 to 11 classes', titleColor: '#3d6cb0', date: 'Sep 2017 - May 2019', minorTitle: '81 School', color: 'lightblue'})
+									+pMix
+										| Последний рывок, последние два класса в физмат. профиле до полного среднего.
 				// Блок Experience
 				+columnSectionMix
 					+wrapperMix
-						+titleMix({text: 'experience'})
-							+iconMix({type: 'icon', src: require('../static/BEM/icon/images/packageIcon.png')})
-					+wrapperMix
-						+listMix
-							+listElMix({majorTitle: 'lKl official', date: 'Oct 2014 - Aug 2018', minorTitle: 'Host'})
-								+pMix
-									| Опять же - я ещё нигде не работал, так что будут хобби-проекты. lKl - Mr&nbsplKlAlRlAlBlIlNl - преимущественно YouTube проект, на котором я выпускал видосики по играм, пробовал делать переводы и т.п.. 
-									br
-									| Именнно этот проект сподвигнул меня познакомиться с фронтендом.  
-							+listElMix({majorTitle: 'White Gloom', date: 'Aug 2018 - Now', minorTitle: 'Host'})
-								+pMix
-									| Mr lKlAlRlAlBlIlNl морально устарел, и на смену ему пришёл новый проект - White&nbspGloom. Проект отличается начинкой и целевой аудиторией - проект полностью отдан творчеству и хобби.
-								+pMix
-									| Для проекта также разрабатывается сайт, но сейчас разработка на паузе.
+						+wrapperElMix
+							+titleMix({text: 'experience'})
+								+iconMix({type: 'icon', src: require('../static/BEM/icon/images/packageIcon.png')})
+						+wrapperElMix
+							+listMix
+								+listElMix({majorTitle: 'lKl official', date: 'Oct 2014 - Aug 2018', minorTitle: 'Host'})
+									+pMix
+										| Опять же - я ещё нигде не работал, так что будут хобби-проекты.
+									+pMix
+										| lKl - Mr&nbsplKlAlRlAlBlIlNl - преимущественно YouTube проект, на котором я выпускал видосики по играм, пробовал делать переводы и т.п.. 
+									+pMix
+										| Именнно этот проект сподвигнул меня познакомиться с фронтендом.  
+								+listElMix({majorTitle: 'White Gloom', date: 'Aug 2018 - Now', minorTitle: 'Host'})
+									+pMix
+										| Mr lKlAlRlAlBlIlNl морально устарел, и на смену ему пришёл новый проект - White&nbspGloom. Проект отличается начинкой и целевой аудиторией - проект полностью отдан творчеству и хобби.
+									+pMix
+										| Для проекта также разрабатывается сайт, но сейчас разработка на паузе.
 				// Блок Software
 				+columnSectionMix
 					+wrapperMix
-						+titleMix({text: 'software'})
-							+iconMix({type: 'icon', src: require('../static/BEM/icon/images/computerIcon.png')})
-					+wrapperMix({justify: 'between'})(style='width: 98%')
-						+rateMix(style='width: 44.5%')
-							+rateElMix({title: 'photoshop', type: 'linear', value: 90})
-							+rateElMix({title: 'illustrator', type: 'linear', value: 20})
-							+rateElMix({title: 'indesign', type: 'linear', value: 0})
-						+rateMix(style='width: 44.5%')
-							+rateElMix({title: 'dreamweaver', type: 'linear', value: 20})
-							+rateElMix({title: 'after effects', type: 'linear', value: 75})
-							+rateElMix({title: 'html&css3', type: 'linear', value: 80})
+						+wrapperElMix
+							+titleMix({text: 'software'})
+								+iconMix({type: 'icon', src: require('../static/BEM/icon/images/computerIcon.png')})
+						+wrapperElMix({justify: 'between'})(style='width: 98%')
+							+rateMix(style='width: 44.5%')
+								+rateElMix({title: 'photoshop', type: 'linear', value: 90})
+								+rateElMix({title: 'illustrator', type: 'linear', value: 20})
+								+rateElMix({title: 'indesign', type: 'linear', value: 0})
+							+rateMix(style='width: 44.5%')
+								+rateElMix({title: 'dreamweaver', type: 'linear', value: 20})
+								+rateElMix({title: 'after effects', type: 'linear', value: 75})
+								+rateElMix({title: 'html&css3', type: 'linear', value: 80})

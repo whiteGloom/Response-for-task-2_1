@@ -15,11 +15,11 @@ const static = require(folder + "/webpackAdds/static.js");  // Файл с ин�
 // Configuration
 module.exports = function() {								// Функция, собирающая модули 
 	return merge([
-		base(folder),
-		babel(folder),
-		pug(folder),
-		stylus(folder),
-		static(folder)
+		base({base: folder}),
+		babel(),
+		pug({base: folder}),
+		stylus(),
+		static()
 	])
 }
 
