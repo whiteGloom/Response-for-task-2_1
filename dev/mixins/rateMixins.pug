@@ -1,0 +1,32 @@
+//- Миксин создаёт блок рейтинга.
+//- Ожидается элемент райтинга.
+mixin rateMix(options)
+    -
+        var options = options ? options : {};
+    .rate&attributes(attributes)
+        if block
+            block
+
+//- Миксин создаёт элемент рейтинга. Свойства:
+//- 'title' (string) -  заголовок элемента. По умолчанию - 'title'.
+//- 'type' (string) ['linear', 'dotted'] - тип рейтинга. По умолчанию - 'linear'. 
+//- 'value' (number) - значение элемента. По умолчанию - 50.
+mixin rateElMix(options)
+    -
+        var options = options ? options : {};
+        var title = options.title ? options.title : 'title',
+            type = options.type ? options.type : 'linear',
+            value = options.value ? options.value : 50;
+    .rate__el(data-value=value + '%' class='' + (' rate__el_type_' + type))&attributes(attributes)
+        em.rate__elTitle=title
+        .rate__elValueBox(class='' + (' rate__elValueBox_type_' + type))
+            case type
+                when 'dotted'
+                    - var filled = Math.round((value * 12)/100);
+                    - for(var i=0; i < filled; i++)
+                        .rate__elValue(style="background-color: #3f6fb6" class='' + (' rate__elValue_type_' + type))
+                    - for(var i=0; i < 12 - filled; i++)
+                        .rate__elValue(style="background-color: #e6e6e6" class='' + (' rate__elValue_type_' + type))
+                when 'linear'
+                    .rate__elValue(style='background-color: #3f6fb6; width:' + value + '%' class='' + (' rate__elValue_type_' + type))
+                    .rate__elValue(style='background-color: #e6e6e6; width:' + (100 - value) + '%' class='' + (' rate__elValue_type_' + type))

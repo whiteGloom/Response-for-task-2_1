@@ -4,10 +4,10 @@
 //- 'text' (string / nothing) - текст. По умолчнию - ''.
 //-Ожидается текст или ничего.
 mixin emMix(options)
-	-
-		var options = options ? options : {};
-		var style = options.style ? options.style : 'italic',
-			text = options.text ? options.text : '';
-	em.em(class='' + (' em_style_' + style))&attributes(attributes)= text
-		if block
-			block
+    -
+        var options = options ? options : {};
+        var style = options.style ? options.style : 'italic',
+            text = options.text ? options.text : '';
+    em.em(class='' + (' em_style_' + style))&attributes(attributes)= text
+        if block
+            block
