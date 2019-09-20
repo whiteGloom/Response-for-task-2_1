@@ -6,7 +6,7 @@ mixin columnMix(options)
     -
         var options = options ? options : {};
         var side = options.side ? options.side : 'left';
-    section.column(class='' + (' column_side_' + side))&attributes(attributes)
+    .column(class='' + (' column_side_' + side))&attributes(attributes)
         if block
             block
 
@@ -15,6 +15,6 @@ mixin columnMix(options)
 mixin columnSectionMix(options)
     -
         var options = options ? options : {};
-    section.column__section&attributes(attributes)
+    .column__section&attributes(attributes)
         if block
             block

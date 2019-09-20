@@ -10,6 +10,12 @@
   }
 }
 
+.block__el_margin {
+  margin-top: 2.25rem;
+  overflow: hidden;
+}
+
+
 .column__section {
   margin-top: 9.55rem;
   width: auto;
@@ -107,14 +113,24 @@ html {
     font-size: 5.41pt;
   }
 }
-@media screen and (max-width: 1380px) {
+@media screen and (max-width: 1460px) {
+  html {
+    font-size: 4.81pt;
+  }
+}
+@media screen and (max-width: 1340px) {
   html {
     font-size: 4.41pt;
   }
 }
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1180px) {
   html {
     font-size: 3.41pt;
+  }
+}
+@media screen and (max-width: 910px) {
+  html {
+    font-size: 3.2pt;
   }
 }
 @media screen and (max-width: 880px) {

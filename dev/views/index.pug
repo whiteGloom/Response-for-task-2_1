@@ -15,17 +15,16 @@ html
             +columnMix({side: 'left'})
                 // Блок Preview
                 +columnSectionMix
-                    +wrapperMix
-                        +wrapperElMix
+                    +blockMix
+                        +blockElMix({margin: false})
                             +userMix({name: 'Evgeniy', surname: 'Miller', profession: 'noname'})
                                 +iconMix({src: require('../static/images/my-logo.png'), alt: 'Logo'})
                 // Блок Profile
                 +columnSectionMix
-                    +wrapperMix
-                        +wrapperElMix
-                            +titleMix({text: 'profile'})
-                                +iconMix({type: 'icon', src: require('../static/BEM/icon/images/manIcon.png')})
-                        +wrapperElMix
+                    +blockMix
+                        +titleMix({text: 'profile'})
+                            +iconMix({type: 'icon', src: require('../static/BEM/icon/images/manIcon.png')})
+                        +blockElMix
                             +pMix
                                 | Привет. Это пример блока с простым текстом. И, раз уж разрешили писать про себя, то почему бы и не воспользоваться возможностью, правильно?
                             +pMix
@@ -36,11 +35,10 @@ html
                                 | Если вкратце, то всё.
                 // Блок Contact
                 +columnSectionMix
-                    +wrapperMix
-                        +wrapperElMix
-                            +titleMix({text: 'contact'})
-                                +iconMix({type: 'icon', src: require('../static/BEM/icon/images/handsetIcon.png')})
-                        +wrapperElMix
+                    +blockMix
+                        +titleMix({text: 'contact'})
+                            +iconMix({type: 'icon', src: require('../static/BEM/icon/images/handsetIcon.png')})
+                        +blockElMix
                             +contactsMix
                                 +contactsElMix({title: 'adress', value: 'Kalinina, Seversk'})
                                 +contactsElMix({title: 'email', value: 'karabin.m@yandex.ru'})
@@ -48,11 +46,10 @@ html
                                 +contactsElMix({title: 'website', value: 'development paused'})
                 // Блок Skills
                 +columnSectionMix
-                    +wrapperMix
-                        +wrapperElMix
-                            +titleMix({text: 'skills'})
-                                +iconMix({type: 'icon', src: require('../static/BEM/icon/images/bulbIcon.png')})
-                        +wrapperElMix
+                    +blockMix
+                        +titleMix({text: 'skills'})
+                            +iconMix({type: 'icon', src: require('../static/BEM/icon/images/bulbIcon.png')})
+                        +blockElMix
                             +rateMix
                                 +rateElMix({title: 'creative', type: 'dotted', value: 75})
                                 +rateElMix({title: 'teamwork', type: 'dotted', value: 80})
@@ -62,11 +59,10 @@ html
             +columnMix({side: 'right'})
                 // Блок Education
                 +columnSectionMix
-                    +wrapperMix
-                        +wrapperElMix
-                            +titleMix({text: 'education'})
-                                +iconMix({type: 'icon', src: require('../static/BEM/icon/images/starIcon.png')})
-                        +wrapperElMix
+                    +blockMix
+                        +titleMix({text: 'education'})
+                            +iconMix({type: 'icon', src: require('../static/BEM/icon/images/starIcon.png')})
+                        +blockElMix
                             +listMix
                                 +listElMix({majorTitle: '1 to 5 classes', titleColor: '#3d6cb0', date: 'Sep 2007 - May 2012', minorTitle: '25 School', color: 'lightblue'})
                                     +pMix
@@ -77,13 +73,15 @@ html
                                 +listElMix({majorTitle: '10 to 11 classes', titleColor: '#3d6cb0', date: 'Sep 2017 - May 2019', minorTitle: '81 School', color: 'lightblue'})
                                     +pMix
                                         | Последний рывок, последние два класса в физмат. профиле до полного среднего.
+                                +listElMix({majorTitle: 'Bachelor', titleColor: '#3d6cb0', date: 'November 2019 - xxx', minorTitle: 'FDO Tusur', color: 'lightblue'})
+                                    +pMix
+                                        | Поступил на заочный факультет ТУСУР, на программную инженерию.
                 // Блок Experience
                 +columnSectionMix
-                    +wrapperMix
-                        +wrapperElMix
-                            +titleMix({text: 'experience'})
-                                +iconMix({type: 'icon', src: require('../static/BEM/icon/images/packageIcon.png')})
-                        +wrapperElMix
+                    +blockMix
+                        +titleMix({text: 'experience'})
+                            +iconMix({type: 'icon', src: require('../static/BEM/icon/images/packageIcon.png')})
+                        +blockElMix
                             +listMix
                                 +listElMix({majorTitle: 'lKl official', date: 'Oct 2014 - Aug 2018', minorTitle: 'Host'})
                                     +pMix
@@ -99,16 +97,17 @@ html
                                         | Для проекта также разрабатывается сайт, но сейчас разработка на паузе.
                 // Блок Software
                 +columnSectionMix
-                    +wrapperMix
-                        +wrapperElMix
-                            +titleMix({text: 'software'})
-                                +iconMix({type: 'icon', src: require('../static/BEM/icon/images/computerIcon.png')})
-                        +wrapperElMix({justify: 'between'})(style='width: 98%')
-                            +rateMix(style='width: 44.5%')
-                                +rateElMix({title: 'photoshop', type: 'linear', value: 90})
-                                +rateElMix({title: 'illustrator', type: 'linear', value: 20})
-                                +rateElMix({title: 'indesign', type: 'linear', value: 0})
-                            +rateMix(style='width: 44.5%')
-                                +rateElMix({title: 'dreamweaver', type: 'linear', value: 20})
-                                +rateElMix({title: 'after effects', type: 'linear', value: 75})
-                                +rateElMix({title: 'html&css3', type: 'linear', value: 80})
+                    +blockMix
+                        +titleMix({text: 'software'})
+                            +iconMix({type: 'icon', src: require('../static/BEM/icon/images/computerIcon.png')})
+                        +blockElMix
+                            +wrapperMix
+                                +wrapperElMix({justify: 'between'})(style='width: 98%')
+                                    +rateMix(style='width: 44.5%')
+                                        +rateElMix({title: 'photoshop', type: 'linear', value: 90})
+                                        +rateElMix({title: 'illustrator', type: 'linear', value: 20})
+                                        +rateElMix({title: 'indesign', type: 'linear', value: 0})
+                                    +rateMix(style='width: 44.5%')
+                                        +rateElMix({title: 'dreamweaver', type: 'linear', value: 20})
+                                        +rateElMix({title: 'after effects', type: 'linear', value: 75})
+                                        +rateElMix({title: 'html&css3', type: 'linear', value: 80})
