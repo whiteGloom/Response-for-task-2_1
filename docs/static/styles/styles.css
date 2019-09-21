@@ -85,17 +85,17 @@
 @font-face {
   font-family: Myriad-Pro;
   font-weight: 450;
-  src: url("../fonts/Myriad-Pro.otf") format("opentype"), url("../fonts/Myriad-Pro.eot?#") format("eot"), url("../fonts/Myriad-Pro.ttf") format("truetype"), url("../fonts/Myriad-Pro.woff") format("woff"), url("../images/Myriad-Pro.svg") format("svg");
+  src: url("../fonts/Myriad-Pro.otf") format('opentype'), url("../fonts/Myriad-Pro.eot?#") format('eot'), url("../fonts/Myriad-Pro.ttf") format('truetype'), url("../fonts/Myriad-Pro.woff") format('woff'), url("../images/Myriad-Pro.svg") format('svg');
 }
 @font-face {
   font-family: Myriad-Pro;
   font-weight: bold;
-  src: url("../fonts/Myriad-Pro-Bold.otf") format("opentype"), url("../fonts/Myriad-Pro-Bold.eot?#") format("eot"), url("../fonts/Myriad-Pro-Bold.ttf") format("truetype"), url("../fonts/Myriad-Pro-Bold.woff") format("woff"), url("../images/Myriad-Pro-Bold.svg") format("svg");
+  src: url("../fonts/Myriad-Pro-Bold.otf") format('opentype'), url("../fonts/Myriad-Pro-Bold.eot?#") format('eot'), url("../fonts/Myriad-Pro-Bold.ttf") format('truetype'), url("../fonts/Myriad-Pro-Bold.woff") format('woff'), url("../images/Myriad-Pro-Bold.svg") format('svg');
 }
 @font-face {
   font-family: Myriad-Pro;
   font-weight: lighter;
-  src: url("../fonts/Myriad-Pro-LightSemiExt.eot") format("eot?#"), url("../fonts/Myriad-Pro-LightSemiExt.ttf") format("truetype"), url("../fonts/Myriad-Pro-LightSemiExt.woff") format("woff"), url("../images/Myriad-Pro-LightSemiExt.svg") format("svg");
+  src: url("../fonts/Myriad-Pro-LightSemiExt.eot") format('eot?#'), url("../fonts/Myriad-Pro-LightSemiExt.ttf") format('truetype'), url("../fonts/Myriad-Pro-LightSemiExt.woff") format('woff'), url("../images/Myriad-Pro-LightSemiExt.svg") format('svg');
 }
 html {
   font-size: 7.41pt;
@@ -225,7 +225,7 @@ b {
   margin-top: 3rem;
 }
 .list__el::before {
-  content: "\2B24";
+  content: '\2B24';
   position: absolute;
   font-size: 5rem;
   left: -8.5rem;
@@ -243,7 +243,7 @@ b {
   font-style: normal;
 }
 .list__elDate::before {
-  content: "// ";
+  content: '// ';
 }
 
 

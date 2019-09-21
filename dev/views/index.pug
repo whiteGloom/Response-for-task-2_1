@@ -6,6 +6,7 @@ html
     // Шапка страницы
     head
         meta(charset="utf-8")
+        meta(name="viewport" content="initial-scale=1.0, width=device-width")
         title Resume
         link(rel="stylesheet" type="text/css" href="static/styles/styles.css")
     // Тело страницы
@@ -18,7 +19,7 @@ html
                     +blockMix
                         +blockElMix({margin: false})
                             +userMix({name: "Evgeniy", surname: "Miller", profession: "noname"})
-                                +iconMix({src: require("../static/images/my-logo.png"), alt: "Logo"})
+                                +iconMix({src: require("../static/images/wglogo.jpg"), alt: "Logo"})
                 // Блок Profile
                 +columnSectionMix
                     +blockMix
