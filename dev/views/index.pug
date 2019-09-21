@@ -1,4 +1,4 @@
-//- Подключение mixin'ов
+//- Подключение mixin"ов
 include ../mixins/mixinsList
 
 doctype html
@@ -12,18 +12,18 @@ html
     body
         main.base
             // Левая колонка страницы
-            +columnMix({side: 'left'})
+            +columnMix({side: "left"})
                 // Блок Preview
                 +columnSectionMix
                     +blockMix
                         +blockElMix({margin: false})
-                            +userMix({name: 'Evgeniy', surname: 'Miller', profession: 'noname'})
-                                +iconMix({src: require('../static/images/my-logo.png'), alt: 'Logo'})
+                            +userMix({name: "Evgeniy", surname: "Miller", profession: "noname"})
+                                +iconMix({src: require("../static/images/my-logo.png"), alt: "Logo"})
                 // Блок Profile
                 +columnSectionMix
                     +blockMix
-                        +titleMix({text: 'profile'})
-                            +iconMix({type: 'icon', src: require('../static/BEM/icon/images/manIcon.png')})
+                        +titleMix({text: "profile"})
+                            +iconMix({type: "icon", src: require("../static/BEM/icon/images/manIcon.png")})
                         +blockElMix
                             +pMix
                                 | Привет. Это пример блока с простым текстом. И, раз уж разрешили писать про себя, то почему бы и не воспользоваться возможностью, правильно?
@@ -36,61 +36,61 @@ html
                 // Блок Contact
                 +columnSectionMix
                     +blockMix
-                        +titleMix({text: 'contact'})
-                            +iconMix({type: 'icon', src: require('../static/BEM/icon/images/handsetIcon.png')})
+                        +titleMix({text: "contact"})
+                            +iconMix({type: "icon", src: require("../static/BEM/icon/images/handsetIcon.png")})
                         +blockElMix
                             +contactsMix
-                                +contactsElMix({title: 'adress', value: 'Kalinina, Seversk'})
-                                +contactsElMix({title: 'email', value: 'karabin.m@yandex.ru'})
-                                +contactsElMix({title: 'phone', value: '+7-952-153-84-08'})
-                                +contactsElMix({title: 'website', value: 'development paused'})
+                                +contactsElMix({title: "adress", value: "Kalinina, Seversk"})
+                                +contactsElMix({title: "email", value: "karabin.m@yandex.ru"})
+                                +contactsElMix({title: "phone", value: "+7-952-153-84-08"})
+                                +contactsElMix({title: "website", value: "development paused"})
                 // Блок Skills
                 +columnSectionMix
                     +blockMix
-                        +titleMix({text: 'skills'})
-                            +iconMix({type: 'icon', src: require('../static/BEM/icon/images/bulbIcon.png')})
+                        +titleMix({text: "skills"})
+                            +iconMix({type: "icon", src: require("../static/BEM/icon/images/bulbIcon.png")})
                         +blockElMix
                             +rateMix
-                                +rateElMix({title: 'creative', type: 'dotted', value: 75})
-                                +rateElMix({title: 'teamwork', type: 'dotted', value: 80})
-                                +rateElMix({title: 'innovate', type: 'dotted', value: 70})
-                                +rateElMix({title: 'communication', type: 'dotted', value: 75})
+                                +rateElMix({title: "creative", type: "dotted", value: 75})
+                                +rateElMix({title: "teamwork", type: "dotted", value: 80})
+                                +rateElMix({title: "innovate", type: "dotted", value: 70})
+                                +rateElMix({title: "communication", type: "dotted", value: 75})
             // Правая колонка страницы
-            +columnMix({side: 'right'})
+            +columnMix({side: "right"})
                 // Блок Education
                 +columnSectionMix
                     +blockMix
-                        +titleMix({text: 'education'})
-                            +iconMix({type: 'icon', src: require('../static/BEM/icon/images/starIcon.png')})
+                        +titleMix({text: "education"})
+                            +iconMix({type: "icon", src: require("../static/BEM/icon/images/starIcon.png")})
                         +blockElMix
                             +listMix
-                                +listElMix({majorTitle: '1 to 5 classes', titleColor: '#3d6cb0', date: 'Sep 2007 - May 2012', minorTitle: '25 School', color: 'lightblue'})
+                                +listElMix({majorTitle: "1 to 5 classes", titleColor: "#3d6cb0", date: "Sep 2007 - May 2012", minorTitle: "25 School", color: "lightblue"})
                                     +pMix
                                         | Вышки нет, поэтому будет то, что есть. 1 - 5 классы, первая школа, учился здесь, пока ещё жил в томске.
-                                +listElMix({majorTitle: '6 to 9 classes', titleColor: '#3d6cb0', date: 'Sep 2012 - May 2017', minorTitle: '81 School', color: 'lightblue'})
+                                +listElMix({majorTitle: "6 to 9 classes", titleColor: "#3d6cb0", date: "Sep 2012 - May 2017", minorTitle: "81 School", color: "lightblue"})
                                     +pMix
                                         | Среднее неполное образование, переезд в Северск.
-                                +listElMix({majorTitle: '10 to 11 classes', titleColor: '#3d6cb0', date: 'Sep 2017 - May 2019', minorTitle: '81 School', color: 'lightblue'})
+                                +listElMix({majorTitle: "10 to 11 classes", titleColor: "#3d6cb0", date: "Sep 2017 - May 2019", minorTitle: "81 School", color: "lightblue"})
                                     +pMix
                                         | Последний рывок, последние два класса в физмат. профиле до полного среднего.
-                                +listElMix({majorTitle: 'Bachelor', titleColor: '#3d6cb0', date: 'November 2019 - xxx', minorTitle: 'FDO Tusur', color: 'lightblue'})
+                                +listElMix({majorTitle: "Bachelor", titleColor: "#3d6cb0", date: "November 2019 - xxx", minorTitle: "FDO Tusur", color: "lightblue"})
                                     +pMix
                                         | Поступил на заочный факультет ТУСУР, на программную инженерию.
                 // Блок Experience
                 +columnSectionMix
                     +blockMix
-                        +titleMix({text: 'experience'})
-                            +iconMix({type: 'icon', src: require('../static/BEM/icon/images/packageIcon.png')})
+                        +titleMix({text: "experience"})
+                            +iconMix({type: "icon", src: require("../static/BEM/icon/images/packageIcon.png")})
                         +blockElMix
                             +listMix
-                                +listElMix({majorTitle: 'lKl official', date: 'Oct 2014 - Aug 2018', minorTitle: 'Host'})
+                                +listElMix({majorTitle: "lKl official", date: "Oct 2014 - Aug 2018", minorTitle: "Host"})
                                     +pMix
                                         | Опять же - я ещё нигде не работал, так что будут хобби-проекты.
                                     +pMix
                                         | lKl - Mr&nbsplKlAlRlAlBlIlNl - преимущественно YouTube проект, на котором я выпускал видосики по играм, пробовал делать переводы и т.п.. 
                                     +pMix
                                         | Именнно этот проект сподвигнул меня познакомиться с фронтендом.  
-                                +listElMix({majorTitle: 'White Gloom', date: 'Aug 2018 - Now', minorTitle: 'Host'})
+                                +listElMix({majorTitle: "White Gloom", date: "Aug 2018 - Now", minorTitle: "Host"})
                                     +pMix
                                         | Mr lKlAlRlAlBlIlNl морально устарел, и на смену ему пришёл новый проект - White&nbspGloom. Проект отличается начинкой и целевой аудиторией - проект полностью отдан творчеству и хобби.
                                     +pMix
@@ -98,16 +98,16 @@ html
                 // Блок Software
                 +columnSectionMix
                     +blockMix
-                        +titleMix({text: 'software'})
-                            +iconMix({type: 'icon', src: require('../static/BEM/icon/images/computerIcon.png')})
+                        +titleMix({text: "software"})
+                            +iconMix({type: "icon", src: require("../static/BEM/icon/images/computerIcon.png")})
                         +blockElMix
                             +wrapperMix
-                                +wrapperElMix({justify: 'between'})(style='width: 98%')
-                                    +rateMix(style='width: 44.5%')
-                                        +rateElMix({title: 'photoshop', type: 'linear', value: 90})
-                                        +rateElMix({title: 'illustrator', type: 'linear', value: 20})
-                                        +rateElMix({title: 'indesign', type: 'linear', value: 0})
-                                    +rateMix(style='width: 44.5%')
-                                        +rateElMix({title: 'dreamweaver', type: 'linear', value: 20})
-                                        +rateElMix({title: 'after effects', type: 'linear', value: 75})
-                                        +rateElMix({title: 'html&css3', type: 'linear', value: 80})
+                                +wrapperElMix({justify: "between"})(style="width: 98%")
+                                    +rateMix(style="width: 44.5%")
+                                        +rateElMix({title: "photoshop", type: "linear", value: 90})
+                                        +rateElMix({title: "illustrator", type: "linear", value: 20})
+                                        +rateElMix({title: "indesign", type: "linear", value: 0})
+                                    +rateMix(style="width: 44.5%")
+                                        +rateElMix({title: "dreamweaver", type: "linear", value: 20})
+                                        +rateElMix({title: "after effects", type: "linear", value: 75})
+                                        +rateElMix({title: "html&css3", type: "linear", value: 80})
