@@ -94,7 +94,7 @@
 }
 @font-face {
   font-family: Myriad-Pro;
-  font-weight: lighter;
+  font-weight: 200;
   src: url("../fonts/Myriad-Pro-LightSemiExt.eot") format('eot?#'), url("../fonts/Myriad-Pro-LightSemiExt.ttf") format('truetype'), url("../fonts/Myriad-Pro-LightSemiExt.woff") format('woff'), url("../images/Myriad-Pro-LightSemiExt.svg") format('svg');
 }
 html {
@@ -363,7 +363,7 @@ b {
 .user__info_type_name {
   font-size: 10.5rem;
   font-family: Myriad-Pro;
-  font-weight: lighter;
+  font-weight: 200;
 }
 
 .user__info_type_profession {
