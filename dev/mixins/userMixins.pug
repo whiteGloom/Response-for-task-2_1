@@ -1,14 +1,14 @@
 //- Миксин создаёт блок информации о пользователе. Свойства:
-//- 'name' (string) - имя пользователя. По умолчанию - 'name'.
-//- 'surname' (string / nothing) - фамилия пользователя.
-//- 'profession' (string) - профессия пользователя. По умолчанию - 'unknown'.
+//- "name" (string) - имя пользователя. По умолчанию - "name".
+//- "surname" (string / nothing) - фамилия пользователя.
+//- "profession" (string) - профессия пользователя. По умолчанию - "unknown".
 //- Ожидается изображение.
 mixin userMix(options)
     -
         var options = options ? options : {};
-        var name = options.name ? options.name : 'name',
+        var name = options.name ? options.name : "name",
             surname  = options.surname,
-            profession = options.profession ? options.profession : 'unknown';
+            profession = options.profession ? options.profession : "unknown";
     .user&attributes(attributes)
         .user__image
             if block

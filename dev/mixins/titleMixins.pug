@@ -1,10 +1,10 @@
 //- Миксин создаёт блок-заголовок. Свойства:
-//- 'text' (string) - текст заголовка. По умолчанию - 'title'.
+//- "text" (string) - текст заголовка. По умолчанию - "title".
 //- Ожидается изображение.
 mixin titleMix(options)
     -
         var options = options ? options : {};
-        var text = options.text ? options.text : 'title';
+        var text = options.text ? options.text : "title";
     header.title&attributes(attributes)
         .title__outer
             .title__icon

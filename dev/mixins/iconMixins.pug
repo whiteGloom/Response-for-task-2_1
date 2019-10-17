@@ -1,16 +1,16 @@
 //- Миксин создаёт иконку. Свойства:
-//- 'src' (string) - ссылка на изоражение. По умолчанию - ''.
-//- 'type' (string) ['image', 'icon'] - тип иконки. По умолчанию - 'image'.
+//- "src" (string) - ссылка на изоражение. По умолчанию - "".
+//- "type" (string) ["image", "icon"] - тип иконки. По умолчанию - "image".
 mixin iconMix(options)
     -
         var options = options ? options : {};
-        var src = options.src ? options.src : '',
-            alt = options.alt ? options.alt : 'alternate text',
-            type = options.type ? options.type : 'image';
+        var src = options.src ? options.src : "",
+            alt = options.alt ? options.alt : "alternate text",
+            type = options.type ? options.type : "image";
     .icon&attributes(attributes)
         .icon__outer
             case type
-                when 'image'
+                when "image"
                     img.icon__image(src=src, alt = alt)
-                when 'icon'
-                    .icon__image(style='background-image: url(' + src + ')')
+                when "icon"
+                    .icon__image(style="background-image: url(" + src + ")")

@@ -247,6 +247,14 @@ b {
 }
 
 
+.list__elMajorTitle_color_black {
+  color: #000;
+}
+
+.list__elMajorTitle_color_blue {
+  color: #3d6cb0;
+}
+
 .list__elMajorTitle {
   display: inline-block;
   margin: 0;
@@ -297,6 +305,14 @@ b {
   font-size: 5rem;
   font-family: Myriad-pro;
   text-transform: uppercase;
+}
+
+.rate__elValue_color_blue {
+  background-color: #3f6fb6;
+}
+
+.rate__elValue_color_gray {
+  background-color: #e6e6e6;
 }
 
 .rate__elValue_type_dotted {
