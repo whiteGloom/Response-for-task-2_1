@@ -6,8 +6,11 @@ html
     // Шапка страницы
     head
         meta(charset="utf-8")
-        meta(name="viewport" content="initial-scale=1.0, width=device-width")
         title Resume
+        link(rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon")
+        meta(name="description" content="Resume")
+        meta(name="Keywords" content="Resume")
+        meta(name="viewport" content="initial-scale=1.0, width=device-width")
         link(rel="stylesheet" type="text/css" href="static/styles/styles.css")
     // Тело страницы
     body
@@ -103,7 +106,7 @@ html
                             +iconMix({type: "icon", src: require("../static/BEM/icon/images/computerIcon.png")})
                         +blockElMix
                             +wrapperMix
-                                +wrapperElMix({justify: "between"})(style="width: 98%")
+                                +wrapperElMix({justify: "between"})
                                     +rateMix(style="width: 44.5%")
                                         +rateElMix({title: "photoshop", type: "linear", value: 90})
                                         +rateElMix({title: "illustrator", type: "linear", value: 20})
