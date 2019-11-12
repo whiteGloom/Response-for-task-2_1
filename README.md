@@ -9,6 +9,7 @@
 `git clone https://github.com/whiteGloom/Response-for-task-2_1.git`
 
 *Команды:*
+
 `npm install` - установка зависимостей
 
 `npm run build` - запуск разовой сборки проекта;
