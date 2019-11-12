@@ -1,14 +1,22 @@
 # Шо ита?
 Ита ответ на второе задание курса, который я прохожу. Часть 1.
 
-Не забудьте про `npm install`, что бы установить зависимости.
+**[Демо-страница](https://whitegloom.github.io/Response-for-task-2_1/ "Демо-страница")** (GitHub Pages)
 
 ## Инструкции
-`npm run build`  - запуск разовой сборки проекта;
+*Клонирование репозитория:*
+
+`git clone https://github.com/whiteGloom/Response-for-task-2_1.git`
+
+*Команды:*
+`npm install` - установка зависимостей
+
+`npm run build` - запуск разовой сборки проекта;
 
 `npm run build-watch` - запуск автоматической пересборки проекта;
 
 `npm run build-live` - запуск сервера;
 
 ## Конец.
-`-whiteGloom`
+
+**-whiteGloom**
