@@ -1,6 +1,6 @@
 //- Миксин создаёт корневой элемент блока-обёртки.
 //- Ожидается элемент обёртки.
-mixin wrapperMix(options)
+mixin wrapper(options)
     -
         var options     = options ? options : {};
     .wrapper&attributes(attributes)
@@ -11,7 +11,7 @@ mixin wrapperMix(options)
 //- "justify" (string) ["between", "around", "unset"] - распределение элементов внутри. По умолчанию - "unset".
 //- "centering" (string / nothing) ["false", "true"] - выравнивание обёртки. По умолчанию - "true".
 //- Ожидается любое содержимое.
-mixin wrapperElMix(options)
+mixin wrapperEl(options)
     -
         var options = options ? options : {};
         var justify = options.justify ? options.justify : "unset",

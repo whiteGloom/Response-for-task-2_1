@@ -1,5 +1,5 @@
 //- Подключение mixin"ов
-include ../mixins/mixinsList
+include ./mixinsList
 
 doctype html
 html
@@ -16,102 +16,102 @@ html
     body
         main.base
             // Левая колонка страницы
-            +columnMix({side: "left"})
+            +column({side: "left"})
                 // Блок Preview
-                +columnSectionMix
-                    +blockMix
-                        +blockElMix({margin: false})
-                            +userMix({name: "Evgeniy", surname: "Miller", profession: "noname"})
-                                +iconMix({src: require("../static/images/wglogo.jpg"), alt: "Logo"})
+                +columnSection
+                    +block
+                        +blockEl({margin: false})
+                            +user({name: "Evgeniy", surname: "Miller", profession: "noname"})
+                                +icon({src: "./static/images/wglogo.jpg", alt: "Logo"})
                 // Блок Profile
-                +columnSectionMix
-                    +blockMix
-                        +titleMix({text: "profile"})
-                            +iconMix({type: "icon", src: require("../static/BEM/icon/images/manIcon.png")})
-                        +blockElMix
-                            +pMix
+                +columnSection
+                    +block
+                        +title({text: "profile"})
+                            +icon({type: "icon", src: "man"})
+                        +blockEl
+                            +p
                                 | Привет. Это пример блока с простым текстом. И, раз уж разрешили писать про себя, то почему бы и не воспользоваться возможностью, правильно?
-                            +pMix
+                            +p
                                 | Итак.. Евгеша, 17 годиков, Северск. Заканчиваю 11 класс, веду никому не нужный канал на YouTube (что мне, кстати, нравится), периодически рисую, читаю, кручу педали, иногда лезу в 3D и так далее.. Всё как обычно. Хочу в Канаду или в Норвегию (посмотрим).
-                            +pMix
+                            +p
                                 b С вебдевом познакомился, когда решил сделать сайт для канала (года 2-3 назад). Активно влез сюда относительно недавно.
-                            +pMix
+                            +p
                                 | Если вкратце, то всё.
                 // Блок Contact
-                +columnSectionMix
-                    +blockMix
-                        +titleMix({text: "contact"})
-                            +iconMix({type: "icon", src: require("../static/BEM/icon/images/handsetIcon.png")})
-                        +blockElMix
-                            +contactsMix
-                                +contactsElMix({title: "adress", value: "Kalinina, Seversk"})
-                                +contactsElMix({title: "email", value: "karabin.m@yandex.ru"})
-                                +contactsElMix({title: "phone", value: "+7-952-153-84-08"})
-                                +contactsElMix({title: "website", value: "development paused"})
+                +columnSection
+                    +block
+                        +title({text: "contact"})
+                            +icon({type: "icon", src: "handset"})
+                        +blockEl
+                            +contacts
+                                +contactsEl({title: "adress", value: "Kalinina, Seversk"})
+                                +contactsEl({title: "email", value: "karabin.m@yandex.ru"})
+                                +contactsEl({title: "phone", value: "+7-952-153-84-08"})
+                                +contactsEl({title: "website", value: "development paused"})
                 // Блок Skills
-                +columnSectionMix
-                    +blockMix
-                        +titleMix({text: "skills"})
-                            +iconMix({type: "icon", src: require("../static/BEM/icon/images/bulbIcon.png")})
-                        +blockElMix
-                            +rateMix
-                                +rateElMix({title: "creative", type: "dotted", value: 75})
-                                +rateElMix({title: "teamwork", type: "dotted", value: 80})
-                                +rateElMix({title: "innovate", type: "dotted", value: 70})
-                                +rateElMix({title: "communication", type: "dotted", value: 75})
+                +columnSection
+                    +block
+                        +title({text: "skills"})
+                            +icon({type: "icon", src: "bulb"})
+                        +blockEl
+                            +rate
+                                +rateEl({title: "creative", type: "dotted", value: 75})
+                                +rateEl({title: "teamwork", type: "dotted", value: 80})
+                                +rateEl({title: "innovate", type: "dotted", value: 70})
+                                +rateEl({title: "communication", type: "dotted", value: 75})
             // Правая колонка страницы
-            +columnMix({side: "right"})
+            +column({side: "right"})
                 // Блок Education
-                +columnSectionMix
-                    +blockMix
-                        +titleMix({text: "education"})
-                            +iconMix({type: "icon", src: require("../static/BEM/icon/images/starIcon.png")})
-                        +blockElMix
-                            +listMix
-                                +listElMix({majorTitle: "1 to 5 classes", titleColor: "blue", date: "Sep 2007 - May 2012", minorTitle: "25 School", color: "lightblue"})
-                                    +pMix
+                +columnSection
+                    +block
+                        +title({text: "education"})
+                            +icon({type: "icon", src: "star"})
+                        +blockEl
+                            +list
+                                +listEl({majorTitle: "1 to 5 classes", titleColor: "blue", date: "Sep 2007 - May 2012", minorTitle: "25 School", color: "lightblue"})
+                                    +p
                                         | Вышки нет, поэтому будет то, что есть. 1 - 5 классы, первая школа, учился здесь, пока ещё жил в томске.
-                                +listElMix({majorTitle: "6 to 9 classes", titleColor: "blue", date: "Sep 2012 - May 2017", minorTitle: "81 School", color: "lightblue"})
-                                    +pMix
+                                +listEl({majorTitle: "6 to 9 classes", titleColor: "blue", date: "Sep 2012 - May 2017", minorTitle: "81 School", color: "lightblue"})
+                                    +p
                                         | Среднее неполное образование, переезд в Северск.
-                                +listElMix({majorTitle: "10 to 11 classes", titleColor: "blue", date: "Sep 2017 - May 2019", minorTitle: "81 School", color: "lightblue"})
-                                    +pMix
+                                +listEl({majorTitle: "10 to 11 classes", titleColor: "blue", date: "Sep 2017 - May 2019", minorTitle: "81 School", color: "lightblue"})
+                                    +p
                                         | Последний рывок, последние два класса в физмат. профиле до полного среднего.
-                                +listElMix({majorTitle: "Bachelor", titleColor: "blue", date: "November 2019 - xxx", minorTitle: "FDO Tusur", color: "lightblue"})
-                                    +pMix
+                                +listEl({majorTitle: "Bachelor", titleColor: "blue", date: "November 2019 - xxx", minorTitle: "FDO Tusur", color: "lightblue"})
+                                    +p
                                         | Поступил на заочный факультет ТУСУР, на программную инженерию.
                 // Блок Experience
-                +columnSectionMix
-                    +blockMix
-                        +titleMix({text: "experience"})
-                            +iconMix({type: "icon", src: require("../static/BEM/icon/images/packageIcon.png")})
-                        +blockElMix
-                            +listMix
-                                +listElMix({majorTitle: "lKl official", date: "Oct 2014 - Aug 2018", minorTitle: "Host"})
-                                    +pMix
+                +columnSection
+                    +block
+                        +title({text: "experience"})
+                            +icon({type: "icon", src: "package"})
+                        +blockEl
+                            +list
+                                +listEl({majorTitle: "lKl official", date: "Oct 2014 - Aug 2018", minorTitle: "Host"})
+                                    +p
                                         | Опять же - я ещё нигде не работал, так что будут хобби-проекты.
-                                    +pMix
+                                    +p
                                         | lKl - Mr&nbsplKlAlRlAlBlIlNl - преимущественно YouTube проект, на котором я выпускал видосики по играм, пробовал делать переводы и т.п.. 
-                                    +pMix
+                                    +p
                                         | Именнно этот проект сподвигнул меня познакомиться с фронтендом.  
-                                +listElMix({majorTitle: "White Gloom", date: "Aug 2018 - Now", minorTitle: "Host"})
-                                    +pMix
+                                +listEl({majorTitle: "White Gloom", date: "Aug 2018 - Now", minorTitle: "Host"})
+                                    +p
                                         | Mr lKlAlRlAlBlIlNl морально устарел, и на смену ему пришёл новый проект - White&nbspGloom. Проект отличается начинкой и целевой аудиторией - проект полностью отдан творчеству и хобби.
-                                    +pMix
+                                    +p
                                         | Для проекта также разрабатывается сайт, но сейчас разработка на паузе.
                 // Блок Software
-                +columnSectionMix
-                    +blockMix
-                        +titleMix({text: "software"})
-                            +iconMix({type: "icon", src: require("../static/BEM/icon/images/computerIcon.png")})
-                        +blockElMix
-                            +wrapperMix
-                                +wrapperElMix({justify: "between"})
-                                    +rateMix(style="width: 44.5%")
-                                        +rateElMix({title: "photoshop", type: "linear", value: 90})
-                                        +rateElMix({title: "illustrator", type: "linear", value: 20})
-                                        +rateElMix({title: "indesign", type: "linear", value: 0})
-                                    +rateMix(style="width: 44.5%")
-                                        +rateElMix({title: "dreamweaver", type: "linear", value: 20})
-                                        +rateElMix({title: "after effects", type: "linear", value: 75})
-                                        +rateElMix({title: "html&css3", type: "linear", value: 80})
+                +columnSection
+                    +block
+                        +title({text: "software"})
+                            +icon({type: "icon", src: "computer"})
+                        +blockEl
+                            +wrapper
+                                +wrapperEl({justify: "between"})
+                                    +rate(style="width: 44.5%")
+                                        +rateEl({title: "photoshop", type: "linear", value: 90})
+                                        +rateEl({title: "illustrator", type: "linear", value: 20})
+                                        +rateEl({title: "indesign", type: "linear", value: 0})
+                                    +rate(style="width: 44.5%")
+                                        +rateEl({title: "dreamweaver", type: "linear", value: 20})
+                                        +rateEl({title: "after effects", type: "linear", value: 75})
+                                        +rateEl({title: "html&css3", type: "linear", value: 80})

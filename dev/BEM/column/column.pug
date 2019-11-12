@@ -2,7 +2,7 @@
 //- "side" (string) ["left", "right"] - сторона колонки. По умолчанию - "left".
 //- Ожидается любое содержимое.
 
-mixin columnMix(options)
+mixin column(options)
     -
         var options = options ? options : {};
         var side = options.side ? options.side : "left";
@@ -12,7 +12,7 @@ mixin columnMix(options)
 
 //- Миксин создаёт скецию колонки.
 //- Ожидается любое содержимое.
-mixin columnSectionMix(options)
+mixin columnSection(options)
     -
         var options = options ? options : {};
     .column__section&attributes(attributes)
