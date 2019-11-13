@@ -1,10 +1,10 @@
 //- Миксин создаёт параграф. Свойства:
 //- "text" (string / nothing) - текст параграфа. По умолчанию - "".
 //- Ожидается текст или ничего.
-mixin p(options)
+mixin pStyled(options)
     -
         var options = options ? options : {};
         var text = options.text ? options.text : "";
-    p.p&attributes(attributes)= text
+    p.pStyled&attributes(attributes)= text
         if block
             block

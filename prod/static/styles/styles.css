@@ -73,15 +73,6 @@
 }
 
 
-.em_style_italic {
-  font-style: italic;
-}
-
-.em_style_normal {
-  font-style: normal;
-}
-
-
 .icon__image_content_bulb {
   background-image: url("../images/bulbIcon.png");
 }
@@ -192,7 +183,7 @@
   padding-left: 11rem;
 }
 
-.p {
+.pStyled {
   font-size: 3rem;
   line-height: 3.75rem;
 }
