@@ -1,0 +1,54 @@
+.list
+  list-style: none
+  padding-left: 11rem
+
+.list__el
+  position: relative
+  margin-top: 2.25rem
+
+.list__el:first-child
+  margin-top: 3rem
+
+.list__el::before
+  content: '\2B24'
+  position: absolute
+  font-size: 5rem
+  left: -8.5rem
+
+.list__el-header{}
+
+.list__el-major-title
+  font-weight: bold
+  display: inline-block
+  margin: 0
+  font-size: 5rem
+  text-transform: uppercase
+  font-family: Myriad-Pro
+  font-weight: bold
+
+.list__el-major-title_color_black
+  color: black
+
+.list__el-major-title_color_blue
+  color: #3d6cb0
+
+.list__el-date
+  display: inline-block
+  margin: 0
+  margin-left: 3rem
+  font-size: 5rem
+  font-style: normal
+
+.list__el-date::before
+  content: '// '
+
+.list__el-minor-title
+  display: block
+  margin: 0
+  font-size: 5rem
+  font-style: normal
+  text-transform: uppercase
+  margin-top: .9rem
+
+.list__el-content
+  margin-top: 1.25rem

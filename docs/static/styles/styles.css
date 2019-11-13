@@ -15,7 +15,23 @@
   overflow: hidden;
 }
 
-
+.column_side_left {
+  width: 36.8%;
+}
+@media screen and (max-width: 880px) {
+  .column_side_left {
+    width: 100%;
+  }
+}
+.column_side_right {
+  width: 56.5%;
+  padding-top: 2.85rem;
+}
+@media screen and (max-width: 880px) {
+  .column_side_right {
+    width: 100%;
+  }
+}
 .column__section {
   margin-top: 9.55rem;
   width: auto;
@@ -27,26 +43,6 @@
   margin-bottom: 6.7rem;
 }
 
-.column_side_left {
-  width: 36.8%;
-}
-@media screen and (max-width: 880px) {
-  .column_side_left {
-    width: 100%;
-  }
-}
-
-.column_side_right {
-  width: 56.5%;
-  padding-top: 2.85rem;
-}
-@media screen and (max-width: 880px) {
-  .column_side_right {
-    width: 100%;
-  }
-}
-
-
 .contacts__el {
   margin-top: 6rem;
   display: flex;
@@ -55,8 +51,7 @@
 .contacts__el:first-child {
   margin-top: 4rem;
 }
-
-.contacts__elTitle {
+.contacts__el-title {
   width: 30%;
   font-style: normal;
   font-size: 4rem;
@@ -65,38 +60,22 @@
   font-weight: bold;
   color: #3d6cb0;
 }
-
-.contacts__elValue {
+.contacts__el-value {
   width: 69%;
   font-size: 4rem;
   font-style: normal;
 }
 
-
-.icon__image_content_bulb {
-  background-image: url("../images/bulbIcon.png");
+.icon {
+  width: 100%;
 }
-
-.icon__image_content_computer {
-  background-image: url("../images/computerIcon.png");
+.icon__outer {
+  position: relative;
+  border: 0.27rem solid #3d6cb0;
+  border-radius: 50%;
+  padding-bottom: 100%;
+  width: 100%;
 }
-
-.icon__image_content_handset {
-  background-image: url("../images/handsetIcon.png");
-}
-
-.icon__image_content_man {
-  background-image: url("../images/manIcon.png");
-}
-
-.icon__image_content_package {
-  background-image: url("../images/packageIcon.png");
-}
-
-.icon__image_content_star {
-  background-image: url("../images/starIcon.png");
-}
-
 .icon__image {
   position: absolute;
   width: 100%;
@@ -109,19 +88,29 @@
   background-color: #3d6cb0;
   background-clip: content-box;
 }
-
-.icon__outer {
-  position: relative;
-  border: 0.27rem solid #3d6cb0;
-  border-radius: 50%;
-  padding-bottom: 100%;
-  width: 100%;
+.icon__image_content_bulb {
+  background-image: url("../images/bulbIcon.png");
+}
+.icon__image_content_computer {
+  background-image: url("../images/computerIcon.png");
+}
+.icon__image_content_handset {
+  background-image: url("../images/handsetIcon.png");
+}
+.icon__image_content_man {
+  background-image: url("../images/manIcon.png");
+}
+.icon__image_content_package {
+  background-image: url("../images/packageIcon.png");
+}
+.icon__image_content_star {
+  background-image: url("../images/starIcon.png");
 }
 
-.icon {
-  width: 100%;
+.list {
+  list-style: none;
+  padding-left: 11rem;
 }
-
 .list__el {
   position: relative;
   margin-top: 2.25rem;
@@ -135,32 +124,8 @@
   font-size: 5rem;
   left: -8.5rem;
 }
-
-.list__elContent {
-  margin-top: 1.25rem;
-}
-
-.list__elDate {
-  display: inline-block;
-  margin: 0;
-  margin-left: 3rem;
-  font-size: 5rem;
-  font-style: normal;
-}
-.list__elDate::before {
-  content: '// ';
-}
-
-
-.list__elMajorTitle_color_black {
-  color: #000;
-}
-
-.list__elMajorTitle_color_blue {
-  color: #3d6cb0;
-}
-
-.list__elMajorTitle {
+.list__el-major-title {
+  font-weight: bold;
   display: inline-block;
   margin: 0;
   font-size: 5rem;
@@ -168,8 +133,23 @@
   font-family: Myriad-Pro;
   font-weight: bold;
 }
-
-.list__elMinorTitle {
+.list__el-major-title_color_black {
+  color: #000;
+}
+.list__el-major-title_color_blue {
+  color: #3d6cb0;
+}
+.list__el-date {
+  display: inline-block;
+  margin: 0;
+  margin-left: 3rem;
+  font-size: 5rem;
+  font-style: normal;
+}
+.list__el-date::before {
+  content: '// ';
+}
+.list__el-minor-title {
   display: block;
   margin: 0;
   font-size: 5rem;
@@ -177,24 +157,13 @@
   text-transform: uppercase;
   margin-top: 0.9rem;
 }
-
-.list {
-  list-style: none;
-  padding-left: 11rem;
+.list__el-content {
+  margin-top: 1.25rem;
 }
 
 .pStyled {
   font-size: 3rem;
   line-height: 3.75rem;
-}
-
-.rate__el_type_dotted {
-  margin-top: 4.25rem;
-  padding: 0 11.5% 0 10.5%;
-  text-align: center;
-}
-.rate__el_type_dotted:first-child {
-  margin-top: 3rem;
 }
 
 .rate__el_type_linear {
@@ -203,136 +172,106 @@
 .rate__el_type_linear:first-child {
   margin-top: 3rem;
 }
-
-
-.rate__elTitle {
+.rate__el_type_dotted {
+  margin-top: 4.25rem;
+  padding: 0 11.5% 0 10.5%;
+  text-align: center;
+}
+.rate__el_type_dotted:first-child {
+  margin-top: 3rem;
+}
+.rate__el-title {
   font-style: normal;
   font-size: 5rem;
   font-family: Myriad-pro;
   text-transform: uppercase;
 }
-
-.rate__elValue_color_blue {
+.rate__el-value-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.rate__el-value-box_type_dotted {
+  margin-top: 1.75rem;
+}
+.rate__el-value-box_type_linear {
+  margin-top: 2.9rem;
+}
+.rate__el-value_color_blue {
   background-color: #3f6fb6;
 }
-
-.rate__elValue_color_gray {
+.rate__el-value_color_gray {
   background-color: #e6e6e6;
 }
-
-.rate__elValue_type_dotted {
+.rate__el-value_type_dotted {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 100%;
   display: inline-block;
 }
-
-.rate__elValue_type_linear {
+.rate__el-value_type_linear {
   height: 4.5rem;
 }
 
-
-.rate__elValueBox_type_dotted {
-  margin-top: 1.75rem;
-}
-
-.rate__elValueBox_type_linear {
-  margin-top: 2.9rem;
-}
-
-.rate__elValueBox {
-  display: flex;
-  justify-content: space-between;
+.title {
   width: 100%;
 }
-
-
-.title__decorline {
-  width: 100%;
-  flex-shrink: 1;
-  border: 0.6rem solid #3d6cb0;
-}
-
-.title__icon {
-  width: 14rem;
-  flex-shrink: 0;
-}
-
 .title__outer {
   display: flex;
   width: 100%;
   justify-content: flex-start;
   align-items: center;
 }
-
+.title__icon {
+  width: 14rem;
+  flex-shrink: 0;
+}
 .title__text {
+  font-weight: bold;
+  text-transform: uppercase;
   margin: 0 2% 0 3%;
   flex-shrink: 0;
   font-size: 8rem;
   color: #3d6cb0;
 }
-
-.title {
+.title__decorline {
   width: 100%;
-}
-
-.user__image {
-  width: 57.75%;
-  margin: 6.5% auto 0 auto;
-}
-
-.user__info_type_name {
-  font-size: 10.5rem;
-  font-family: Myriad-Pro;
-  font-weight: 200;
-}
-
-.user__info_type_profession {
-  font-size: 5rem;
-  font-family: Myriad-Pro;
-  font-weight: bold;
-}
-
-.user__info_type_surname {
-  margin-top: -3.9rem;
-  font-size: 12.4rem;
-  font-family: Myriad-Pro;
-  font-weight: bold;
-}
-
-.user__info {
-  display: block;
-  text-transform: uppercase;
-  font-style: normal;
-}
-
-.user__infoBox {
-  text-align: center;
-  margin: 6.5% auto 7.5% auto;
+  flex-shrink: 1;
+  border: 0.6rem solid #3d6cb0;
 }
 
 .user {
   padding-left: 2.9rem;
   overflow: hidden;
 }
-
-.wrapper__el_centering {
-  margin-left: auto;
-  margin-right: auto;
+.user__image {
+  width: 57.75%;
+  margin: 6.5% auto 0 auto;
 }
-
-.wrapper__el_justify_around {
-  justify-content: space-around;
-  display: flex;
+.user__info-box {
+  text-align: center;
+  margin: 6.5% auto 7.5% auto;
 }
-
-.wrapper__el_justify_between {
-  justify-content: space-between;
-  display: flex;
-}
-
-.wrapper__el_justify_unset {
+.user__info {
   display: block;
+  text-transform: uppercase;
+  font-style: normal;
+}
+.user__info_type_name {
+  font-size: 10.5rem;
+  font-family: Myriad-Pro;
+  font-weight: 200;
+}
+.user__info_type_profession {
+  font-size: 5rem;
+  font-family: Myriad-Pro;
+  font-weight: bold;
+}
+.user__info_type_surname {
+  margin-top: -3.9rem;
+  font-size: 12.4rem;
+  font-family: Myriad-Pro;
+  font-weight: bold;
 }
 
 .wrapper__el {
@@ -342,7 +281,21 @@
 .wrapper__el:first-child {
   margin-top: 0;
 }
-
+.wrapper__el_centering {
+  margin-left: auto;
+  margin-right: auto;
+}
+.wrapper__el_justify_around {
+  justify-content: space-around;
+  display: flex;
+}
+.wrapper__el_justify_between {
+  justify-content: space-between;
+  display: flex;
+}
+.wrapper__el_justify_unset {
+  display: block;
+}
 
 @font-face {
   font-family: Myriad-Pro;
@@ -360,6 +313,7 @@
   src: url("../fonts/Myriad-Pro-LightSemiExt.eot") format('eot?#'), url("../fonts/Myriad-Pro-LightSemiExt.ttf") format('truetype'), url("../fonts/Myriad-Pro-LightSemiExt.woff") format('woff'), url("../images/Myriad-Pro-LightSemiExt.svg") format('svg');
 }
 html {
+  background-color: #fff;
   font-size: 7.41pt;
   font-family: Myriad-Pro;
   font-weight: 450;
@@ -430,27 +384,12 @@ html {
     font-size: 2.5pt;
   }
 }
-body {
-  background-color: #fff;
-}
-ul {
-  margin: 0;
-}
+ul,
 body,
 h1,
 h2,
 li,
 p {
   margin: 0;
-}
-h2,
-h1 {
-  text-transform: uppercase;
-  font-family: Myriad-Pro;
-  font-weight: bold;
-}
-b {
-  font-family: Myriad-Pro;
-  font-weight: bold;
 }
 

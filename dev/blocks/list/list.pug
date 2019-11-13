@@ -21,12 +21,12 @@ mixin listEl(options)
             titleColor = options.titleColor ? options.titleColor: "black"
             text = options.text ? options.text : "";
     li.list__el&attributes(attributes)
-        .list__elHeader
-            h2.list__elMajorTitle(class="" + (" list__elMajorTitle_color_" + titleColor))= majorTitle
+        .list__el-header
+            h2.list__el-major-title(class="" + (" list__el-major-title_color_" + titleColor))= majorTitle
             if date
-                em.list__elDate= date
+                em.list__el-date= date
             if minorTitle
-                em.list__elMinorTitle= minorTitle
-        .list__elContent= text
+                em.list__el-minor-title= minorTitle
+        .list__el-content= text
             if block
                 block

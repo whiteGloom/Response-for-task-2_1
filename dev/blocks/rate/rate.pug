@@ -18,15 +18,15 @@ mixin rateEl(options)
             type = options.type ? options.type : "linear",
             value = options.value ? options.value : 50;
     .rate__el(data-value=value + "%" class="" + (" rate__el_type_" + type))&attributes(attributes)
-        em.rate__elTitle=title
-        .rate__elValueBox(class="" + (" rate__elValueBox_type_" + type))
+        em.rate__el-title=title
+        .rate__el-value-box(class="" + (" rate__el-value-box_type_" + type))
             case type
                 when "dotted"
                     - var filled = Math.round((value * 12) / 100);
                     - for(var i=0; i < filled; i++)
-                        .rate__elValue(class="" + (" rate__elValue_type_" + type) + (" rate__elValue_color_blue"))
+                        .rate__el-value(class="" + (" rate__el-value_type_" + type) + (" rate__el-value_color_blue"))
                     - for(var i=0; i < 12 - filled; i++)
-                        .rate__elValue(class="" + (" rate__elValue_type_" + type) + (" rate__elValue_color_gray"))
+                        .rate__el-value(class="" + (" rate__el-value_type_" + type) + (" rate__el-value_color_gray"))
                 when "linear"
-                    .rate__elValue(style="width:" + value + "%" class="" + (" rate__elValue_type_" + type) + (" rate__elValue_color_blue"))
-                    .rate__elValue(style="width:" + (100 - value) + "%" class="" + (" rate__elValue_type_" + type) + (" rate__elValue_color_gray"))
+                    .rate__el-value(style="width:" + value + "%" class="" + (" rate__el-value_type_" + type) + (" rate__el-value_color_blue"))
+                    .rate__el-value(style="width:" + (100 - value) + "%" class="" + (" rate__el-value_type_" + type) + (" rate__el-value_color_gray"))
