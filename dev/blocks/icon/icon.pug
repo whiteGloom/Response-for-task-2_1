@@ -13,4 +13,4 @@ mixin icon(options)
                 when "image"
                     img.icon__image(src=image, alt = alt)
                 when "icon"
-                    .icon__image(style="background-image: url(" + "./static/images/" + image + "Icon.png" + ")")
+                    .icon__image(class="" + (" icon__image_content_" + image))
