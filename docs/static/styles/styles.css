@@ -242,6 +242,7 @@
 .title__decorline {
   width: 100%;
   flex-shrink: 1;
+  background-color: #3d6cb0;
   border: 0.6rem solid #3d6cb0;
 }
 
