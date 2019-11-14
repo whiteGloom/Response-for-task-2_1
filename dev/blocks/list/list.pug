@@ -1,32 +1,14 @@
-//- Миксин создаёт корневой элемент списка.
-//- Ожидаются элементы списка.
 mixin list(options)
-    ul.list&attributes(attributes)
-        if block
-            block
-
-//- Миксин создаёт элемент списка. Свойства:
-//- "majorTitle" (string) - главный заголовок элемента списка. По умолчанию - "major title".
-//- "date" (string / nothing) - дата.
-//- "minorTitle" (string / nothing) - второстепенный заголовок элемента списка.
-//- "titleColor" (string) - цвет главного заголовка. По умолчанию - "black".
-//- "text" (string / nothing) - текст элемента. По умолчанию - "".
-//- Ожидается тест или ничего.
-mixin listEl(options)
     -
         var options = options ? options : {};
-        var majorTitle = options.majorTitle ? options.majorTitle : "major title",
-            date = options.date,
-            minorTitle = options.minorTitle,
-            titleColor = options.titleColor ? options.titleColor: "black"
-            text = options.text ? options.text : "";
-    li.list__el&attributes(attributes)
-        .list__el-header
-            h2.list__el-major-title(class="" + (" list__el-major-title_color_" + titleColor))= majorTitle
-            if date
-                em.list__el-date= date
-            if minorTitle
-                em.list__el-minor-title= minorTitle
-        .list__el-content= text
-            if block
-                block
+        var data = options.data ? options.data : {};
+    ul.list&attributes(attributes)
+        for item in data
+            li.list__el&attributes(attributes)
+                .list__el-header
+                    h2.list__el-major-title(class="" + (" list__el-major-title_color_" + (item.titleColor ? item.titleColor : "black")))= item.majorTitle
+                    if item.date
+                        em.list__el-date= item.date
+                    if item.minorTitle
+                        em.list__el-minor-title= item.minorTitle
+                .list__el-content!= item.text

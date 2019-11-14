@@ -1,14 +1,13 @@
-//- Миксин создаёт блок-заголовок. Свойства:
-//- "text" (string) - текст заголовка. По умолчанию - "title".
-//- Ожидается изображение.
+include ../icon/icon
+
 mixin title(options)
     -
         var options = options ? options : {};
         var text = options.text ? options.text : "title";
+        var icon = options.icon ? options.icon : "";
     header.title&attributes(attributes)
         .title__outer
             .title__icon
-                if block
-                    block
+                +icon({type: "icon", src: icon})
             h1.title__text= text
             hr.title__decorline

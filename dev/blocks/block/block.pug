@@ -1,14 +1,13 @@
+include ../title/title
+
 mixin block(options)
     -
         var options = options ? options : {};
-    section.block
-        if block
-            block
-
-mixin blockEl(options)
-    -
-        var options = options ? options : {};
+        var title = options.title !== undefined ? options.title : false;
         var margin = options.margin !== undefined ? options.margin : true;
-    .block__el(class="" + (margin ? " block__el_margin" : ""))
-        if block
-            block
+    section.block
+        if title
+            +title({text: title.text, icon: title.icon})
+        .block__content(class="" + (margin ? " block__content_margin" : ""))
+            if block
+                block

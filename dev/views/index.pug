@@ -1,14 +1,10 @@
-//- Подключение блоков
-include ../blocks/wrapper/wrapper
+include ../blocks/block/block
+include ../blocks/title/title
 include ../blocks/user/user
-include ../blocks/icon/icon
 include ../blocks/contacts/contacts
 include ../blocks/rate/rate
 include ../blocks/list/list
 include ../blocks/pStyled/pStyled
-include ../blocks/column/column
-include ../blocks/title/title
-include ../blocks/block/block
 
 doctype html
 html
@@ -24,103 +20,102 @@ html
     // Тело страницы
     body
         main.base
-            // Левая колонка страницы
-            +column({side: "left"})
+            .column.column_side_left
                 // Блок Preview
-                +columnSection
-                    +block
-                        +blockEl({margin: false})
-                            +user({name: "Evgeniy", surname: "Miller", profession: "noname"})
-                                +icon({src: "./static/images/wglogo.jpg", alt: "Logo"})
+                .column__section
+                    +block({margin: false})
+                        +user({name: "Evgeniy", surname: "Miller", profession: "noname", logo: "./static/images/wglogo.jpg"})
                 // Блок Profile
-                +columnSection
-                    +block
-                        +title({text: "profile"})
-                            +icon({type: "icon", src: "man"})
-                        +blockEl
-                            +pStyled
-                                | Привет. Это пример блока с простым текстом. И, раз уж разрешили писать про себя, то почему бы и не воспользоваться возможностью, правильно?
-                            +pStyled
-                                | Итак.. Евгеша, 17 годиков, Северск. Заканчиваю 11 класс, веду никому не нужный канал на YouTube (что мне, кстати, нравится), периодически рисую, читаю, кручу педали, иногда лезу в 3D и так далее.. Всё как обычно. Хочу в Канаду или в Норвегию (посмотрим).
-                            +pStyled
-                                b С вебдевом познакомился, когда решил сделать сайт для канала (года 2-3 назад). Активно влез сюда относительно недавно.
-                            +pStyled
-                                | Если вкратце, то всё.
+                .column__section
+                    +block({title: {text: "profile", icon: "man"}})
+                        +pStyled
+                            | Привет. Это пример блока с простым текстом. И, раз уж разрешили писать про себя, то почему бы и не воспользоваться возможностью, правильно?
+                        +pStyled
+                            | Итак.. Евгеша, 17 годиков, Северск. Заканчиваю 11 класс, веду никому не нужный канал на YouTube (что мне, кстати, нравится), периодически рисую, читаю, кручу педали, иногда лезу в 3D и так далее.. Всё как обычно. Хочу в Канаду или в Норвегию (посмотрим).
+                        +pStyled
+                            b С вебдевом познакомился, когда решил сделать сайт для канала (года 2-3 назад). Активно влез сюда относительно недавно.
+                        +pStyled
+                            | Если вкратце, то всё.
                 // Блок Contact
-                +columnSection
-                    +block
-                        +title({text: "contact"})
-                            +icon({type: "icon", src: "handset"})
-                        +blockEl
-                            +contacts
-                                +contactsEl({title: "adress", value: "Kalinina, Seversk"})
-                                +contactsEl({title: "email", value: "karabin.m@yandex.ru"})
-                                +contactsEl({title: "phone", value: "+7-952-153-84-08"})
-                                +contactsEl({title: "website", value: "development paused"})
+                .column__section
+                    +block({title:{text: "contact", icon: "handset"}})
+                        +contacts({
+                            data: [
+                                {title: "adress", value: "Kalinina, Seversk"},
+                                {title: "email", value: "karabin.m@yandex.ru"},
+                                {title: "phone", value: "+7-952-153-84-08"},
+                                {title: "website", value: "development paused"}
+                            ]
+                        })
                 // Блок Skills
-                +columnSection
-                    +block
-                        +title({text: "skills"})
-                            +icon({type: "icon", src: "bulb"})
-                        +blockEl
-                            +rate
-                                +rateEl({title: "creative", type: "dotted", value: 75})
-                                +rateEl({title: "teamwork", type: "dotted", value: 80})
-                                +rateEl({title: "innovate", type: "dotted", value: 70})
-                                +rateEl({title: "communication", type: "dotted", value: 75})
-            // Правая колонка страницы
-            +column({side: "right"})
+                .column__section
+                    +block({title: {text: "skills", icon: "bulb"}})
+                        +rate({data: [
+                            {title: "creative", value: 75},
+                            {title: "teamwork", value: 80},
+                            {title: "innovate", value: 70},
+                            {title: "communication", value: 75}
+                        ], type: "dotted"})
+            .column.column_side_right
                 // Блок Education
-                +columnSection
-                    +block
-                        +title({text: "education"})
-                            +icon({type: "icon", src: "star"})
-                        +blockEl
-                            +list
-                                +listEl({majorTitle: "1 to 5 classes", titleColor: "blue", date: "Sep 2007 - May 2012", minorTitle: "25 School", color: "lightblue"})
-                                    +pStyled
-                                        | Вышки нет, поэтому будет то, что есть. 1 - 5 классы, первая школа, учился здесь, пока ещё жил в томске.
-                                +listEl({majorTitle: "6 to 9 classes", titleColor: "blue", date: "Sep 2012 - May 2017", minorTitle: "81 School", color: "lightblue"})
-                                    +pStyled
-                                        | Среднее неполное образование, переезд в Северск.
-                                +listEl({majorTitle: "10 to 11 classes", titleColor: "blue", date: "Sep 2017 - May 2019", minorTitle: "81 School", color: "lightblue"})
-                                    +pStyled
-                                        | Последний рывок, последние два класса в физмат. профиле до полного среднего.
-                                +listEl({majorTitle: "Bachelor", titleColor: "blue", date: "November 2019 - xxx", minorTitle: "FDO Tusur", color: "lightblue"})
-                                    +pStyled
-                                        | Поступил на заочный факультет ТУСУР, на программную инженерию.
+                .column__section
+                    +block({title: {text: "education", icon: "star"}})
+                        +list({data: [
+                            {
+                                majorTitle: "1 to 5 classes",
+                                titleColor: "blue",
+                                date: "Sep 2007 - May 2012",
+                                minorTitle: "25 School", color: "lightblue",
+                                text: "Вышки нет, поэтому будет то, что есть. 1 - 5 классы, первая школа, учился здесь, пока ещё жил в томске."
+                            },
+                            {
+                                majorTitle: "6 to 9 classes",
+                                titleColor: "blue",
+                                date: "Sep 2012 - May 2017",
+                                minorTitle: "81 School", color: "lightblue",
+                                text: "Среднее неполное образование, переезд в Северск."
+                            },
+                            {
+                                majorTitle: "10 to 11 classes",
+                                titleColor: "blue",
+                                date: "Sep 2017 - May 2019",
+                                minorTitle: "81 School", color: "lightblue",
+                                text: "Последний рывок, последние два класса в физмат. профиле до полного среднего."
+                            },
+                            {
+                                majorTitle: "Bachelor",
+                                titleColor: "blue",
+                                date: "November 2019 - xxx",
+                                minorTitle: "FDO Tusur",
+                                color: "lightblue",
+                                text: "Поступил на заочный факультет ТУСУР, на программную инженерию."
+                            }
+                        ]})
                 // Блок Experience
-                +columnSection
-                    +block
-                        +title({text: "experience"})
-                            +icon({type: "icon", src: "package"})
-                        +blockEl
-                            +list
-                                +listEl({majorTitle: "lKl official", date: "Oct 2014 - Aug 2018", minorTitle: "Host"})
-                                    +pStyled
-                                        | Опять же - я ещё нигде не работал, так что будут хобби-проекты.
-                                    +pStyled
-                                        | lKl - Mr&nbsplKlAlRlAlBlIlNl - преимущественно YouTube проект, на котором я выпускал видосики по играм, пробовал делать переводы и т.п.. 
-                                    +pStyled
-                                        | Именнно этот проект сподвигнул меня познакомиться с фронтендом.  
-                                +listEl({majorTitle: "White Gloom", date: "Aug 2018 - Now", minorTitle: "Host"})
-                                    +pStyled
-                                        | Mr lKlAlRlAlBlIlNl морально устарел, и на смену ему пришёл новый проект - White&nbspGloom. Проект отличается начинкой и целевой аудиторией - проект полностью отдан творчеству и хобби.
-                                    +pStyled
-                                        | Для проекта также разрабатывается сайт, но сейчас разработка на паузе.
+                .column__section
+                    +block({title: {text: "experience", icon: "package"}})
+                        +list({data: [
+                            {
+                                majorTitle: "lKl official",
+                                date: "Oct 2014 - Aug 2018",
+                                minorTitle: "Host",
+                                text: "Опять же - я ещё нигде не работал, так что будут хобби-проекты.<br>lKl - Mr&nbsplKlAlRlAlBlIlNl - преимущественно YouTube проект, на котором я выпускал видосики по играм, пробовал делать переводы и т.п..<br>Именнно этот проект сподвигнул меня познакомиться с фронтендом."
+                            },
+                            {
+                                majorTitle: "White Gloom",
+                                date: "Aug 2018 - Now",
+                                minorTitle: "Host",
+                                text: "Mr lKlAlRlAlBlIlNl морально устарел, и на смену ему пришёл новый проект - White&nbspGloom.<br>Проект отличается начинкой и целевой аудиторией - проект полностью отдан творчеству и хобби.<br>Для проекта также разрабатывается сайт, но сейчас разработка на паузе."
+                            }
+                        ]})
                 // Блок Software
-                +columnSection
-                    +block
-                        +title({text: "software"})
-                            +icon({type: "icon", src: "computer"})
-                        +blockEl
-                            +wrapper
-                                +wrapperEl({justify: "between"})
-                                    +rate(style="width: 44.5%")
-                                        +rateEl({title: "photoshop", type: "linear", value: 90})
-                                        +rateEl({title: "illustrator", type: "linear", value: 20})
-                                        +rateEl({title: "indesign", type: "linear", value: 0})
-                                    +rate(style="width: 44.5%")
-                                        +rateEl({title: "dreamweaver", type: "linear", value: 20})
-                                        +rateEl({title: "after effects", type: "linear", value: 75})
-                                        +rateEl({title: "html&css3", type: "linear", value: 80})
+                .column__section
+                    +block({title: {text: "software", icon: "computer"}})
+                        +rate({data: [
+                            {title: "photoshop", value: 90},
+                            {title: "dreamweaver", value: 20},
+                            {title: "illustrator", value: 20},
+                            {title: "after effects", value: 75},
+                            {title: "indesign", value: 0},
+                            {title: "html&css3", value: 80}
+                        ], type: "linear"})

@@ -1,20 +1,9 @@
-//- Миксин создаёт блок контактов.
-//- Ожидается список контактов.
 mixin contacts(options)
     -
         var options = options ? options : {};
+        var data = options.data ? options.data : [];
     .contacts&attributes(attributes)
-        if block
-            block
-
-//- Миксин создаёт контакт. Свойства:
-//- "title" (string) - заголовок контакта. По умолчанию - "title".
-//- "value" (string) - значение контакта. По умолчанию - "undefined".
-mixin contactsEl(options)
-    -
-        var options = options ? options : {};
-        var title = options.title ? options.title : "title",
-            value = options.value ? options.value : "undefined";
-    .contacts__el&attributes(attributes)
-        em.contacts__el-title= title
-        em.contacts__el-value= value
+        for item in data
+            .contacts__el&attributes(attributes)
+               em.contacts__el-title= item.title
+               em.contacts__el-value= item.value

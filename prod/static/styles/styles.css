@@ -10,7 +10,7 @@
   }
 }
 
-.block__el_margin {
+.block__content_margin {
   margin-top: 2.25rem;
   overflow: hidden;
 }
@@ -159,6 +159,8 @@
 }
 .list__el-content {
   margin-top: 1.25rem;
+  font-size: 3rem;
+  line-height: 3.75rem;
 }
 
 .pStyled {
@@ -166,10 +168,13 @@
   line-height: 3.75rem;
 }
 
-.rate__el_type_linear {
-  margin-top: 4.5rem;
+.rate_type_linear {
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
 }
-.rate__el_type_linear:first-child {
+.rate__el_type_linear {
+  width: 44.5%;
   margin-top: 3rem;
 }
 .rate__el_type_dotted {
@@ -272,29 +277,6 @@
   font-size: 12.4rem;
   font-family: Myriad-Pro;
   font-weight: bold;
-}
-
-.wrapper__el {
-  margin-top: 2.25rem;
-  overflow: hidden;
-}
-.wrapper__el:first-child {
-  margin-top: 0;
-}
-.wrapper__el_centering {
-  margin-left: auto;
-  margin-right: auto;
-}
-.wrapper__el_justify_around {
-  justify-content: space-around;
-  display: flex;
-}
-.wrapper__el_justify_between {
-  justify-content: space-between;
-  display: flex;
-}
-.wrapper__el_justify_unset {
-  display: block;
 }
 
 @font-face {
