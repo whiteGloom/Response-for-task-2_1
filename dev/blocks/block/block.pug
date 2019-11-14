@@ -3,8 +3,7 @@ include ../title/title
 mixin block(options)
     -
         var options = options ? options : {};
-        var title = options.title !== undefined ? options.title : false;
-        var margin = options.margin !== undefined ? options.margin : true;
+        var {title = false, margin = true} = options;
     section.block
         if title
             +title({text: title.text, icon: title.icon})

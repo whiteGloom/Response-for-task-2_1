@@ -1,7 +1,7 @@
 mixin list(options)
     -
         var options = options ? options : {};
-        var data = options.data ? options.data : {};
+        var {data = []} = options;
     ul.list&attributes(attributes)
         for item in data
             li.list__el&attributes(attributes)

@@ -1,7 +1,7 @@
 mixin contacts(options)
     -
         var options = options ? options : {};
-        var data = options.data ? options.data : [];
+        var {data} = options;
     .contacts&attributes(attributes)
         for item in data
             .contacts__el&attributes(attributes)

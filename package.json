@@ -1,6 +1,6 @@
 {
   "name": "Response-for-task",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "The answer to the task number 2.1",
   "main": "index.js",
   "scripts": {
