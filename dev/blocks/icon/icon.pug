@@ -1,11 +1,7 @@
 mixin icon(options)
     -
-        var options = options ? options : {};
-        var {image = "", alt = "alternate text", type = "image"} = options;
+        options = options ? options : {};
+        const {src = "", alt = "alternate text"} = options;
     .icon&attributes(attributes)
         .icon__outer
-            case type
-                when "image"
-                    img.icon__image(src=image, alt = alt)
-                when "icon"
-                    .icon__image(class="" + (" icon__image_content_" + image))
+            img.icon__image(src=src, alt=alt)

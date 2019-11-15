@@ -2,11 +2,11 @@ include ../title/title
 
 mixin block(options)
     -
-        var options = options ? options : {};
-        var {title = false, margin = true} = options;
+        options = options ? options : {};
+        const {title = false, margin = true} = options;
     section.block
         if title
-            +title({text: title.text, icon: title.icon})
+            +title({text: title.text, src: title.src})
         .block__content(class="" + (margin ? " block__content_margin" : ""))
             if block
                 block

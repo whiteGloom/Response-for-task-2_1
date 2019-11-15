@@ -1,9 +1,19 @@
 mixin contacts(options)
     -
-        var options = options ? options : {};
-        var {data} = options;
+        options = options ? options : {};
+        const {data} = options;
     .contacts&attributes(attributes)
         for item in data
             .contacts__el&attributes(attributes)
-               em.contacts__el-title= item.title
-               em.contacts__el-value= item.value
+                .contacts__el-title= item.title
+                case item.type
+                    when "skype"
+                        a.contacts__el-value(href="skype: " + item.href + "?call")= item.value
+                    when "phone"
+                        a.contacts__el-value(href="tel: " + item.href)= item.value
+                    when "e-mail"
+                        a.contacts__el-value(href="mailto: " + item.href)= item.value
+                    when "text"
+                        .contacts__el-value= item.value
+                    default
+                        a.contacts__el-value(href=item.href target="_blank" rel="noopener noreferrer")= item.value

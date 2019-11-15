@@ -1,7 +1,7 @@
 mixin rate(options)
     -
-        var options = options ? options : {};
-        var {type = "linear", data = []} = options;
+        options = options ? options : {};
+        const {type = "linear", data = []} = options;
     .rate(class="" + (" rate_type_" + type))&attributes(attributes)
         for item in data
             .rate__el(class="" + (" rate__el_type_" + type))&attributes(attributes)

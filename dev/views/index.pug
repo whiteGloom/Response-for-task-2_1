@@ -4,7 +4,7 @@ include ../blocks/user/user
 include ../blocks/contacts/contacts
 include ../blocks/rate/rate
 include ../blocks/list/list
-include ../blocks/pStyled/pStyled
+include ../blocks/p-styled/p-styled
 
 doctype html
 html
@@ -12,7 +12,7 @@ html
     head
         meta(charset="utf-8")
         title Resume
-        link(rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon")
+        link(rel="shortcut src" href="static/images/favsrc.ico" type="image/x-src")
         meta(name="description" content="Resume")
         meta(name="Keywords" content="Resume")
         meta(name="viewport" content="initial-scale=1.0, width=device-width")
@@ -27,29 +27,29 @@ html
                         +user({name: "Evgeniy", surname: "Miller", profession: "noname", logo: "./static/images/wglogo.jpg"})
                 // Блок Profile
                 .column__section
-                    +block({title: {text: "profile", icon: "man"}})
-                        +pStyled
+                    +block({title: {text: "profile", src: "./static/images/man-icon.png"}})
+                        +p-styled
                             | Привет. Это пример блока с простым текстом. И, раз уж разрешили писать про себя, то почему бы и не воспользоваться возможностью, правильно?
-                        +pStyled
+                        +p-styled
                             | Итак.. Евгеша, 17 годиков, Северск. Заканчиваю 11 класс, веду никому не нужный канал на YouTube (что мне, кстати, нравится), периодически рисую, читаю, кручу педали, иногда лезу в 3D и так далее.. Всё как обычно. Хочу в Канаду или в Норвегию (посмотрим).
-                        +pStyled
+                        +p-styled
                             b С вебдевом познакомился, когда решил сделать сайт для канала (года 2-3 назад). Активно влез сюда относительно недавно.
-                        +pStyled
+                        +p-styled
                             | Если вкратце, то всё.
                 // Блок Contact
                 .column__section
-                    +block({title:{text: "contact", icon: "handset"}})
+                    +block({title: {text: "contact", src: "./static/images/handset-icon.png"}})
                         +contacts({
                             data: [
-                                {title: "adress", value: "Kalinina, Seversk"},
-                                {title: "email", value: "karabin.m@yandex.ru"},
-                                {title: "phone", value: "+7-952-153-84-08"},
-                                {title: "website", value: "development paused"}
+                                {title: "address", type: "text", value: "Kalinina, Seversk"},
+                                {title: "email", type: "e-mail", value: "karabin.m@yandex.ru", href: "karabin.m@yandex.ru"},
+                                {title: "phone", type: "phone", value: "+7-952-153-84-08", href: "+7-952-153-84-08"},
+                                {title: "website", type: "text", value: "development paused"}
                             ]
                         })
                 // Блок Skills
                 .column__section
-                    +block({title: {text: "skills", icon: "bulb"}})
+                    +block({title: {text: "skills", src: "./static/images/bulb-icon.png"}})
                         +rate({data: [
                             {title: "creative", value: 75},
                             {title: "teamwork", value: 80},
@@ -59,7 +59,7 @@ html
             .column.column_side_right
                 // Блок Education
                 .column__section
-                    +block({title: {text: "education", icon: "star"}})
+                    +block({title: {text: "education", src: "./static/images/star-icon.png"}})
                         +list({data: [
                             {
                                 majorTitle: "1 to 5 classes",
@@ -93,7 +93,7 @@ html
                         ]})
                 // Блок Experience
                 .column__section
-                    +block({title: {text: "experience", icon: "package"}})
+                    +block({title: {text: "experience", src: "./static/images/package-icon.png"}})
                         +list({data: [
                             {
                                 majorTitle: "lKl official",
@@ -110,7 +110,7 @@ html
                         ]})
                 // Блок Software
                 .column__section
-                    +block({title: {text: "software", icon: "computer"}})
+                    +block({title: {text: "software", src: "./static/images/computer-icon.png"}})
                         +rate({data: [
                             {title: "photoshop", value: 90},
                             {title: "dreamweaver", value: 20},

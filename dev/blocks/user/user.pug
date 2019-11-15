@@ -2,11 +2,11 @@ include ../icon/icon
 
 mixin user(options)
     -
-        var options = options ? options : {};
-        var {name = "name", surname, profession = "unknown", logo} = options;
+        options = options ? options : {};
+        const {name = "name", surname, profession = "unknown", logo} = options;
     .user&attributes(attributes)
         .user__image
-            +icon({image: logo, alt: "Logo"})
+            +icon({src: logo, alt: "Logo"})
         .user__info-box
             em.user__info.user__info_type_name= name
             if surname

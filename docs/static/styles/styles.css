@@ -52,11 +52,11 @@
   margin-top: 4rem;
 }
 .contacts__el-title {
-  width: 30%;
+  width: 31%;
   font-style: normal;
   font-size: 4rem;
   text-transform: uppercase;
-  font-family: Myriad-Pro;
+  font-family: 'Myriad-Pro';
   font-weight: bold;
   color: #3d6cb0;
 }
@@ -64,6 +64,11 @@
   width: 69%;
   font-size: 4rem;
   font-style: normal;
+  color: #000;
+  text-decoration: none;
+}
+.contacts__el-value:visited {
+  color: #000;
 }
 
 .icon {
@@ -87,24 +92,6 @@
   background-size: cover;
   background-color: #3d6cb0;
   background-clip: content-box;
-}
-.icon__image_content_bulb {
-  background-image: url("../images/bulb-icon.png");
-}
-.icon__image_content_computer {
-  background-image: url("../images/computer-icon.png");
-}
-.icon__image_content_handset {
-  background-image: url("../images/handset-icon.png");
-}
-.icon__image_content_man {
-  background-image: url("../images/man-icon.png");
-}
-.icon__image_content_package {
-  background-image: url("../images/package-icon.png");
-}
-.icon__image_content_star {
-  background-image: url("../images/star-icon.png");
 }
 
 .list {
@@ -130,7 +117,7 @@
   margin: 0;
   font-size: 5rem;
   text-transform: uppercase;
-  font-family: Myriad-Pro;
+  font-family: 'Myriad-Pro';
   font-weight: bold;
 }
 .list__el-major-title_color_black {
@@ -163,7 +150,7 @@
   line-height: 3.75rem;
 }
 
-.pStyled {
+.p-styled {
   font-size: 3rem;
   line-height: 3.75rem;
 }
@@ -188,7 +175,7 @@
 .rate__el-title {
   font-style: normal;
   font-size: 5rem;
-  font-family: Myriad-pro;
+  font-family: 'Myriad-pro';
   text-transform: uppercase;
 }
 .rate__el-value-box {
@@ -265,40 +252,40 @@
 }
 .user__info_type_name {
   font-size: 10.5rem;
-  font-family: Myriad-Pro;
+  font-family: 'Myriad-Pro';
   font-weight: 200;
 }
 .user__info_type_profession {
   font-size: 5rem;
-  font-family: Myriad-Pro;
+  font-family: 'Myriad-Pro';
   font-weight: bold;
 }
 .user__info_type_surname {
   margin-top: -3.9rem;
   font-size: 12.4rem;
-  font-family: Myriad-Pro;
+  font-family: 'Myriad-Pro';
   font-weight: bold;
 }
 
 @font-face {
-  font-family: myriad-pro;
+  font-family: 'myriad-pro';
   font-weight: 450;
-  src: url("../fonts/myriad-pro.otf") format('opentype'), url("../fonts/myriad-pro.eot?#") format('eot'), url("../fonts/myriad-pro.ttf") format('truetype'), url("../fonts/myriad-pro.woff") format('woff'), url("../images/myriad-pro.svg") format('svg');
+  src: url("../fonts/myriad-pro.ttf") format('truetype'), url("../fonts/myriad-pro.woff") format('woff'), url("../images/myriad-pro.svg") format('svg');
 }
 @font-face {
-  font-family: myriad-pro;
+  font-family: 'myriad-pro';
   font-weight: bold;
-  src: url("../fonts/myriad-pro-bold.otf") format('opentype'), url("../fonts/myriad-pro-bold.eot?#") format('eot'), url("../fonts/myriad-pro-bold.ttf") format('truetype'), url("../fonts/myriad-pro-bold.woff") format('woff'), url("../images/myriad-pro-bold.svg") format('svg');
+  src: format('eot'), url("../fonts/myriad-pro-bold.ttf") format('truetype'), url("../fonts/myriad-pro-bold.woff") format('woff'), url("../images/myriad-pro-bold.svg") format('svg');
 }
 @font-face {
-  font-family: myriad-pro;
+  font-family: 'myriad-pro';
   font-weight: 200;
-  src: url("../fonts/myriad-pro-light-semi-ext.eot") format('eot?#'), url("../fonts/myriad-pro-light-semi-ext.ttf") format('truetype'), url("../fonts/myriad-pro-light-semi-ext.woff") format('woff'), url("../images/myriad-pro-light-semi-ext.svg") format('svg');
+  src: format('eot?#'), url("../fonts/myriad-pro-light-semi-ext.ttf") format('truetype'), url("../fonts/myriad-pro-light-semi-ext.woff") format('woff'), url("../images/myriad-pro-light-semi-ext.svg") format('svg');
 }
 html {
   background-color: #fff;
   font-size: 7.41pt;
-  font-family: myriad-pro;
+  font-family: 'myriad-pro';
   font-weight: 450;
   color: #000;
 }
