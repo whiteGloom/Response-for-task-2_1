@@ -56,7 +56,7 @@
   font-style: normal;
   font-size: 4rem;
   text-transform: uppercase;
-  font-family: 'Myriad-Pro';
+  font-family: Myriad-Pro, Arial, sans-serif;
   font-weight: bold;
   color: #3d6cb0;
 }
@@ -112,12 +112,11 @@
   left: -8.5rem;
 }
 .list__el-major-title {
-  font-weight: bold;
   display: inline-block;
   margin: 0;
   font-size: 5rem;
   text-transform: uppercase;
-  font-family: 'Myriad-Pro';
+  font-family: Myriad-Pro, Arial, sans-serif;
   font-weight: bold;
 }
 .list__el-major-title_color_black {
@@ -175,7 +174,7 @@
 .rate__el-title {
   font-style: normal;
   font-size: 5rem;
-  font-family: 'Myriad-pro';
+  font-family: Myriad-pro, Arial, sans-serif;
   text-transform: uppercase;
 }
 .rate__el-value-box {
@@ -252,40 +251,40 @@
 }
 .user__info_type_name {
   font-size: 10.5rem;
-  font-family: 'Myriad-Pro';
+  font-family: Myriad-Pro, Arial, sans-serif;
   font-weight: 200;
 }
 .user__info_type_profession {
   font-size: 5rem;
-  font-family: 'Myriad-Pro';
+  font-family: Myriad-Pro, Arial, sans-serif;
   font-weight: bold;
 }
 .user__info_type_surname {
   margin-top: -3.9rem;
   font-size: 12.4rem;
-  font-family: 'Myriad-Pro';
+  font-family: 'myriad-pro';
   font-weight: bold;
 }
 
 @font-face {
-  font-family: 'myriad-pro';
+  font-family: Myriad-Pro;
   font-weight: 450;
   src: url("../fonts/myriad-pro.ttf") format('truetype'), url("../fonts/myriad-pro.woff") format('woff'), url("../images/myriad-pro.svg") format('svg');
 }
 @font-face {
-  font-family: 'myriad-pro';
+  font-family: Myriad-Pro;
   font-weight: bold;
-  src: format('eot'), url("../fonts/myriad-pro-bold.ttf") format('truetype'), url("../fonts/myriad-pro-bold.woff") format('woff'), url("../images/myriad-pro-bold.svg") format('svg');
+  src: url("../fonts/myriad-pro-bold.ttf") format('truetype'), url("../fonts/myriad-pro-bold.woff") format('woff'), url("../images/myriad-pro-bold.svg") format('svg');
 }
 @font-face {
-  font-family: 'myriad-pro';
+  font-family: Myriad-Pro;
   font-weight: 200;
-  src: format('eot?#'), url("../fonts/myriad-pro-light-semi-ext.ttf") format('truetype'), url("../fonts/myriad-pro-light-semi-ext.woff") format('woff'), url("../images/myriad-pro-light-semi-ext.svg") format('svg');
+  src: url("../fonts/myriad-pro-light-semi-ext.ttf") format('truetype'), url("../fonts/myriad-pro-light-semi-ext.woff") format('woff'), url("../images/myriad-pro-light-semi-ext.svg") format('svg');
 }
 html {
   background-color: #fff;
   font-size: 7.41pt;
-  font-family: 'myriad-pro';
+  font-family: Myriad-Pro, Arial, sans-serif;
   font-weight: 450;
   color: #000;
 }
