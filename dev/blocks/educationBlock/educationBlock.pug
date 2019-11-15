@@ -1,0 +1,9 @@
+include ../block/block
+include ../list/list
+
+mixin educationBlock(options)
+    -
+        options = options ? options : {};
+        const {data = []} = options;
+    +block({title: {text: "education", src: "./static/images/star-icon.png"}})
+        +list({data: data})

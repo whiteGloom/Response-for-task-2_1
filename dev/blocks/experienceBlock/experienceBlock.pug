@@ -1,0 +1,9 @@
+include ../block/block
+include ../list/list
+
+mixin experienceBlock(options)
+    -
+        options = options ? options : {};
+        const {data = []} = options;
+    +block({title: {text: "experience", src: "./static/images/package-icon.png"}})
+        +list({data: data})

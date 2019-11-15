@@ -2,6 +2,4 @@ mixin p-styled(options)
     -
         options = options ? options : {};
         const {text = ""} = options;
-    p.p-styled&attributes(attributes)= text
-        if block
-            block
+    p.p-styled&attributes(attributes)!= text

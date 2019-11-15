@@ -1,0 +1,9 @@
+include ../block/block
+include ../p-styled/p-styled
+
+mixin profileBlock(options)
+    -
+        options = options ? options : {};
+        const {text = ""} = options;
+    +block({title: {text: "profile", src: "./static/images/man-icon.png"}})
+        +p-styled({text: text})

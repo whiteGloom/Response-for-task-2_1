@@ -1,15 +1,3 @@
-.base {
-  padding: 5% 4.6% 5% 5%;
-  display: flex;
-  justify-content: space-between;
-}
-@media screen and (max-width: 880px) {
-  .base {
-    display: block;
-    justify-content: unset;
-  }
-}
-
 .block__content_margin {
   margin-top: 2.25rem;
   overflow: hidden;
@@ -69,6 +57,18 @@
 }
 .contacts__el-value:visited {
   color: #000;
+}
+
+.content {
+  padding: 5% 4.6% 5% 5%;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 880px) {
+  .content {
+    display: block;
+    justify-content: unset;
+  }
 }
 
 .icon {

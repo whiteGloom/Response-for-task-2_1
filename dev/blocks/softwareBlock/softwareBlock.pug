@@ -1,0 +1,9 @@
+include ../block/block
+include ../rate/rate
+
+mixin softwareBlock(options)
+    -
+        options = options ? options : {};
+        const {data = []} = options;
+    +block({title: {text: "software", src: "./static/images/computer-icon.png"}})
+        +rate({data: data, type: "linear"})
