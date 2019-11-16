@@ -1,3 +1,5 @@
+include ../p-styled/p-styled
+
 mixin list(options)
     -
         options = options ? options : {};
@@ -11,4 +13,5 @@ mixin list(options)
                         em.list__el-date= item.date
                     if item.minorTitle
                         em.list__el-minor-title= item.minorTitle
-                .list__el-content!= item.text
+                .list__el-content
+                    +p-styled({text: item.text})

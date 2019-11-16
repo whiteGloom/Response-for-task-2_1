@@ -1,4 +1,4 @@
-.block__content_margin {
+.block__content {
   margin-top: 2.25rem;
   overflow: hidden;
 }
@@ -41,7 +41,6 @@
 }
 .contacts__el-title {
   width: 31%;
-  font-style: normal;
   font-size: 4rem;
   text-transform: uppercase;
   font-family: Myriad-Pro, Arial, sans-serif;
@@ -51,7 +50,6 @@
 .contacts__el-value {
   width: 69%;
   font-size: 4rem;
-  font-style: normal;
   color: #000;
   text-decoration: none;
 }
@@ -127,8 +125,7 @@
 }
 .list__el-date {
   display: inline-block;
-  margin: 0;
-  margin-left: 3rem;
+  margin: 0 0 0 3rem;
   font-size: 5rem;
   font-style: normal;
 }
@@ -137,16 +134,13 @@
 }
 .list__el-minor-title {
   display: block;
-  margin: 0;
+  margin: 0.9rem 0 0;
   font-size: 5rem;
   font-style: normal;
   text-transform: uppercase;
-  margin-top: 0.9rem;
 }
 .list__el-content {
   margin-top: 1.25rem;
-  font-size: 3rem;
-  line-height: 3.75rem;
 }
 
 .p-styled {
@@ -204,12 +198,8 @@
   height: 4.5rem;
 }
 
-.title {
-  width: 100%;
-}
 .title__outer {
   display: flex;
-  width: 100%;
   justify-content: flex-start;
   align-items: center;
 }

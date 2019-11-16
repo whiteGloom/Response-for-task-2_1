@@ -13,4 +13,72 @@ html
         link(rel="stylesheet" type="text/css" href="static/styles/styles.css")
     // Тело страницы
     body
-        +content()
+        +content({
+            userData: {name: "Evgeniy", surname: "Miller", profession: "noname", logo: "./static/images/wglogo.jpg"},
+            profileData: {text: "Привет. Это пример блока с простым текстом. И, раз уж разрешили писать про себя, то почему бы и не воспользоваться возможностью, правильно?<br>Итак.. Евгеша, 17 годиков, Северск. Заканчиваю 11 класс, веду никому не нужный канал на YouTube (что мне, кстати, нравится), периодически рисую, читаю, кручу педали, иногда лезу в 3D и так далее.. Всё как обычно. Хочу в Канаду или в Норвегию (посмотрим).<br><b>С вебдевом познакомился, когда решил сделать сайт для канала (года 2-3 назад). Активно влез сюда относительно недавно.</b><br>Если вкратце, то всё."},
+            contactsData: {data: [
+                {title: "address", type: "text", value: "Kalinina, Seversk"},
+                {title: "email", type: "e-mail", value: "karabin.m@yandex.ru", href: "karabin.m@yandex.ru"},
+                {title: "phone", type: "phone", value: "+7-952-153-84-08", href: "+7-952-153-84-08"},
+                {title: "website", type: "text", value: "development paused"}
+            ]},
+            skillsData: {data: [
+                {title: "creative", value: 75},
+                {title: "teamwork", value: 80},
+                {title: "innovate", value: 70},
+                {title: "communication", value: 75}
+            ]},
+            educationData: {data: [
+                {
+                    majorTitle: "1 to 5 classes",
+                    titleColor: "blue",
+                    date: "Sep 2007 - May 2012",
+                    minorTitle: "25 School", color: "lightblue",
+                    text: "Вышки нет, поэтому будет то, что есть. 1 - 5 классы, первая школа, учился здесь, пока ещё жил в томске."
+                },
+                {
+                    majorTitle: "6 to 9 classes",
+                    titleColor: "blue",
+                    date: "Sep 2012 - May 2017",
+                    minorTitle: "81 School", color: "lightblue",
+                    text: "Среднее неполное образование, переезд в Северск."
+                },
+                {
+                    majorTitle: "10 to 11 classes",
+                    titleColor: "blue",
+                    date: "Sep 2017 - May 2019",
+                    minorTitle: "81 School", color: "lightblue",
+                    text: "Последний рывок, последние два класса в физмат. профиле до полного среднего."
+                },
+                {
+                    majorTitle: "Bachelor",
+                    titleColor: "blue",
+                    date: "November 2019 - xxx",
+                    minorTitle: "FDO Tusur",
+                    color: "lightblue",
+                    text: "Поступил на заочный факультет ТУСУР, на программную инженерию."
+                }
+            ]},
+            experienceData: {data: [
+                {
+                    majorTitle: "lKl official",
+                    date: "Oct 2014 - Aug 2018",
+                    minorTitle: "Host",
+                    text: "Опять же - я ещё нигде не работал, так что будут хобби-проекты.<br>lKl - Mr&nbsplKlAlRlAlBlIlNl - преимущественно YouTube проект, на котором я выпускал видосики по играм, пробовал делать переводы и т.п..<br>Именнно этот проект сподвигнул меня познакомиться с фронтендом."
+                },
+                {
+                    majorTitle: "White Gloom",
+                    date: "Aug 2018 - Now",
+                    minorTitle: "Host",
+                    text: "Mr lKlAlRlAlBlIlNl морально устарел, и на смену ему пришёл новый проект - White&nbspGloom.<br>Проект отличается начинкой и целевой аудиторией - проект полностью отдан творчеству и хобби.<br>Для проекта также разрабатывается сайт, но сейчас разработка на паузе."
+                }
+            ]},
+            softwareData: {data: [
+                {title: "photoshop", value: 90},
+                {title: "dreamweaver", value: 20},
+                {title: "illustrator", value: 20},
+                {title: "after effects", value: 75},
+                {title: "indesign", value: 0},
+                {title: "html&css3", value: 80}
+            ]}
+        })
