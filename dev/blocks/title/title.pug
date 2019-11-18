@@ -2,9 +2,9 @@ include ../icon/icon
 
 mixin title(options)
     -
-        options = options ? options : {};
+        options = options || {};
         const {text = "title", src = ""} = options;
-    header.title&attributes(attributes)
+    header.title
         .title__outer
             .title__icon
                 +icon({type: "icon", src: src})

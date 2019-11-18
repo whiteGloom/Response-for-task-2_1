@@ -2,50 +2,49 @@
   list-style: none
   padding-left: 11rem
 
-.list__el
-  position: relative
-  margin-top: 2.25rem
+  &__el
+    position: relative
+    margin-top: 2.25rem
 
-.list__el:first-child
-  margin-top: 3rem
+    &:first-child
+      margin-top: 3rem
 
-.list__el::before
-  content: '\2B24'
-  position: absolute
-  font-size: 5rem
-  left: -8.5rem
+    &::before
+      content: '\2B24'
+      position: absolute
+      font-size: 5rem
+      left: -8.5rem
 
-.list__el-header{}
+  &__el-major-title
+    display: inline-block
+    margin: 0
+    font-size: 5rem
+    text-transform: uppercase
+    font-family: Myriad-Pro, Arial, sans-serif
+    font-weight: bold
 
-.list__el-major-title
-  display: inline-block
-  margin: 0
-  font-size: 5rem
-  text-transform: uppercase
-  font-family: Myriad-Pro, Arial, sans-serif
-  font-weight: bold
+    &_color
+      &_black
+        color: black
 
-.list__el-major-title_color_black
-  color: black
+      &_blue
+        color: #3d6cb0
 
-.list__el-major-title_color_blue
-  color: #3d6cb0
+  &__el-date
+    display: inline-block
+    margin: 0 0 0 3rem
+    font-size: 5rem
+    font-style: normal
 
-.list__el-date
-  display: inline-block
-  margin: 0 0 0 3rem
-  font-size: 5rem
-  font-style: normal
+    &::before
+      content: '// '
 
-.list__el-date::before
-  content: '// '
+  &__el-minor-title
+    display: block
+    margin: .9rem 0 0
+    font-size: 5rem
+    font-style: normal
+    text-transform: uppercase
 
-.list__el-minor-title
-  display: block
-  margin: .9rem 0 0
-  font-size: 5rem
-  font-style: normal
-  text-transform: uppercase
-
-.list__el-content
-  margin-top: 1.25rem
+  &__el-content
+    margin-top: 1.25rem

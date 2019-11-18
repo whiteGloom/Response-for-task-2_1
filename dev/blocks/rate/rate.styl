@@ -1,50 +1,56 @@
-.rate_type_linear
-  justify-content: space-between
-  display: flex
-  flex-wrap: wrap
+.rate
+  &_type
+    &_linear
+      justify-content: space-between
+      display: flex
+      flex-wrap: wrap
+      
+  &__el
+    &_type
+      &_linear
+        width: 44.5%
+        margin-top: 3rem
 
-.rate__el_type_linear
-  width: 44.5%
-  margin-top: 3rem
+      &_dotted
+        margin-top: 4.25rem
+        padding: 0 11.5% 0 10.5%
+        text-align: center
 
-.rate__el_type_dotted
-  margin-top: 4.25rem
-  padding: 0 11.5% 0 10.5%
-  text-align: center
+        &:first-child
+          margin-top: 3rem
 
-.rate__el_type_dotted:first-child
-  margin-top: 3rem
+  &__el-title
+    font-style: normal
+    font-size: 5rem
+    font-family: Myriad-pro, Arial, sans-serif
+    text-transform: uppercase
 
-.rate__el-title
-  font-style: normal
-  font-size: 5rem
-  font-family: Myriad-pro, Arial, sans-serif
-  text-transform: uppercase
+  &__el-value-box
+    display: flex
+    justify-content: space-between
+    width: 100%
 
-.rate__el-value-box
-  display: flex
-  justify-content: space-between
-  width: 100%
+    &_type
+      &_dotted
+        margin-top: 1.75rem
 
-.rate__el-value-box_type_dotted
-  margin-top: 1.75rem
+      &_linear
+        margin-top: 2.9rem
 
-.rate__el-value-box_type_linear
-  margin-top: 2.9rem
+  &__el-value
+    &_color
+      &_blue
+        background-color: #3f6fb6
+        
+      &_gray
+        background-color: #e6e6e6
 
-.rate__el-value{}
+    &_type
+      &_dotted
+        width: 3.5rem
+        height: 3.5rem
+        border-radius: 100%
+        display: inline-block
 
-.rate__el-value_color_blue
-  background-color: #3f6fb6
-  
-.rate__el-value_color_gray
-  background-color: #e6e6e6
-
-.rate__el-value_type_dotted
-  width: 3.5rem
-  height: 3.5rem
-  border-radius: 100%
-  display: inline-block
-
-.rate__el-value_type_linear
-  height: 4.5rem
+      &_linear
+        height: 4.5rem

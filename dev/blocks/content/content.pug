@@ -1,14 +1,14 @@
 include ../user/user
-include ../profileBlock/profileBlock
-include ../contactsBlock/contactsBlock
-include ../skillsBlock/skillsBlock
-include ../educationBlock/educationBlock
-include ../experienceBlock/experienceBlock
-include ../softwareBlock/softwareBlock
+include ../profile-block/profile-block
+include ../contacts-block/contacts-block
+include ../skills-block/skills-block
+include ../education-block/education-block
+include ../experience-block/experience-block
+include ../software-block/software-block
 
 mixin content(options)
     -
-        options = options ? options : {};
+        options = options || {};
         const {userData, profileData, contactsData, skillsData, educationData, experienceData, softwareData} = options;
     main.content
         .column.column_side_left
@@ -16,20 +16,20 @@ mixin content(options)
                 +user(userData)
 
             .column__section
-                +profileBlock(profileData)
+                +profile-block(profileData)
 
             .column__section
-                +contactsBlock(contactsData)
+                +contacts-block(contactsData)
 
             .column__section
-                +skillsBlock(skillsData)
+                +skills-block(skillsData)
 
         .column.column_side_right
             .column__section
-                +educationBlock(educationData)
+                +education-block(educationData)
 
             .column__section
-                +experienceBlock(experienceData)
+                +experience-block(experienceData)
 
             .column__section
-                +softwareBlock(softwareData)
+                +software-block(softwareData)

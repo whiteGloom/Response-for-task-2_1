@@ -2,9 +2,9 @@ include ../icon/icon
 
 mixin user(options)
     -
-        options = options ? options : {};
+        options = options || {};
         const {name = "name", surname, profession = "unknown", logo} = options;
-    .user&attributes(attributes)
+    .user
         .user__image
             +icon({src: logo, alt: "Logo"})
         .user__info-box

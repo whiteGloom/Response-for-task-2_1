@@ -1,9 +1,9 @@
 include ../block/block
 include ../contacts/contacts
 
-mixin contactsBlock(options)
+mixin contacts-block(options)
     -
-        options = options ? options : {};
+        options = options || {};
         const {data = []} = options;
     +block({title: {text: "contact", src: "./static/images/handset-icon.png"}})
         +contacts({data: data})

@@ -1,12 +1,12 @@
-include ../p-styled/p-styled
+include ../paragraph/paragraph
 
 mixin list(options)
     -
-        options = options ? options : {};
+        options = options || {};
         const {data = []} = options;
-    ul.list&attributes(attributes)
+    ul.list
         for item in data
-            li.list__el&attributes(attributes)
+            li.list__el
                 .list__el-header
                     h2.list__el-major-title(class="" + (" list__el-major-title_color_" + (item.titleColor ? item.titleColor : "black")))= item.majorTitle
                     if item.date
@@ -14,4 +14,4 @@ mixin list(options)
                     if item.minorTitle
                         em.list__el-minor-title= item.minorTitle
                 .list__el-content
-                    +p-styled({text: item.text})
+                    +paragraph({text: item.text})

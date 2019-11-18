@@ -1,10 +1,10 @@
 mixin rate(options)
     -
-        options = options ? options : {};
+        options = options || {};
         const {type = "linear", data = []} = options;
-    .rate(class="" + (" rate_type_" + type))&attributes(attributes)
+    .rate(class="" + (" rate_type_" + type))
         for item in data
-            .rate__el(class="" + (" rate__el_type_" + type))&attributes(attributes)
+            .rate__el(class="" + (" rate__el_type_" + type))
                 em.rate__el-title=item.title
                 .rate__el-value-box(class="" + (" rate__el-value-box_type_" + type))
                     case type

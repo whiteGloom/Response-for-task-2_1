@@ -1,10 +1,10 @@
 mixin contacts(options)
     -
-        options = options ? options : {};
+        options = options || {};
         const {data} = options;
-    .contacts&attributes(attributes)
+    .contacts
         for item in data
-            .contacts__el&attributes(attributes)
+            .contacts__el
                 .contacts__el-title= item.title
                 case item.type
                     when "skype"

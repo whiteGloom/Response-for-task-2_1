@@ -1,9 +1,9 @@
 include ../block/block
 include ../rate/rate
 
-mixin skillsBlock(options)
+mixin skills-block(options)
     -
-        options = options ? options : {};
+        options = options || {};
         const {data = []} = options;
     +block({title: {text: "skills", src: "./static/images/bulb-icon.png"}})
         +rate({data: data, type: "dotted"})
