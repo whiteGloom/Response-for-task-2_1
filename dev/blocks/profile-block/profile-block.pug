@@ -1,9 +1,12 @@
-include ../block/block
+include ../title/title
 include ../paragraph/paragraph
 
 mixin profile-block(options)
     -
         options = options || {};
         const {text = ""} = options;
-    +block({title: {text: "profile", src: "./static/images/man-icon.png"}})
-        +paragraph({text: text})
+    .profile-block
+        .profile-block__title
+            +title({text: "pofile", src: "./static/images/man-icon.png"})
+        .profile-block__el
+            +paragraph({text: text})

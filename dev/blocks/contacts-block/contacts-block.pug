@@ -1,9 +1,10 @@
-include ../block/block
 include ../contacts/contacts
 
 mixin contacts-block(options)
     -
         options = options || {};
         const {data = []} = options;
-    +block({title: {text: "contact", src: "./static/images/handset-icon.png"}})
-        +contacts({data: data})
+    section.contacts-block
+        +title({text: "contact", src: "./static/images/handset-icon.png"})
+        .contacts-block__el
+            +contacts({data: data})

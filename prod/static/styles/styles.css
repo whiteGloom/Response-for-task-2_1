@@ -1,8 +1,3 @@
-.block__content {
-  margin-top: 2.25rem;
-  overflow: hidden;
-}
-
 .column_side_left {
   width: 36.8%;
 }
@@ -29,6 +24,11 @@
 }
 .column__section:last-child {
   margin-bottom: 6.7rem;
+}
+
+.contacts-block__el {
+  margin-top: 2.25rem;
+  overflow: hidden;
 }
 
 .contacts__el {
@@ -67,6 +67,16 @@
     display: block;
     justify-content: unset;
   }
+}
+
+.education-block__el {
+  margin-top: 2.25rem;
+  overflow: hidden;
+}
+
+.experience-block__el {
+  margin-top: 2.25rem;
+  overflow: hidden;
 }
 
 .icon {
@@ -148,6 +158,11 @@
   line-height: 3.75rem;
 }
 
+.profile-block__el {
+  margin-top: 2.25rem;
+  overflow: hidden;
+}
+
 .rate_type_linear {
   justify-content: space-between;
   display: flex;
@@ -196,6 +211,16 @@
 }
 .rate__el-value_type_linear {
   height: 4.5rem;
+}
+
+.skills-block__el {
+  margin-top: 2.25rem;
+  overflow: hidden;
+}
+
+.software-block__el {
+  margin-top: 2.25rem;
+  overflow: hidden;
 }
 
 .title__outer {

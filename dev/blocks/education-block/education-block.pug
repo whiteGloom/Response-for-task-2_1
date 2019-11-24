@@ -1,9 +1,10 @@
-include ../block/block
 include ../list/list
 
 mixin education-block(options)
     -
         options = options || {};
         const {data = []} = options;
-    +block({title: {text: "education", src: "./static/images/star-icon.png"}})
-        +list({data: data})
+    .education-block
+        +title({text: "education", src: "./static/images/star-icon.png"})
+        .education-block__el
+            +list({data: data})

@@ -1,9 +1,10 @@
-include ../block/block
 include ../rate/rate
 
 mixin skills-block(options)
     -
         options = options || {};
         const {data = []} = options;
-    +block({title: {text: "skills", src: "./static/images/bulb-icon.png"}})
-        +rate({data: data, type: "dotted"})
+    section.skills-block
+        +title({text: "skills", src: "./static/images/bulb-icon.png"})
+        .skills-block__el
+            +rate({data: data, type: "dotted"})

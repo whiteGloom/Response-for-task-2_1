@@ -1,9 +1,10 @@
-include ../block/block
 include ../list/list
 
 mixin experience-block(options)
     -
         options = options || {};
         const {data = []} = options;
-    +block({title: {text: "experience", src: "./static/images/package-icon.png"}})
-        +list({data: data})
+    .experience-block
+        +title({text: "experience", src: "./static/images/package-icon.png"})
+        .experience-block
+            +list({data: data})
