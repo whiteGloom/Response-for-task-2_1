@@ -3,8 +3,8 @@ include ../contacts/contacts
 mixin contacts-block(options)
     -
         options = options || {};
-        const {data = []} = options;
+        const {data = [], title="", image=""} = options;
     section.contacts-block
-        +title({text: "contact", src: "./static/images/handset-icon.png"})
+        +title({text: title, src: image})
         .contacts-block__el
             +contacts({data: data})

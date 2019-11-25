@@ -3,8 +3,8 @@ include ../list/list
 mixin education-block(options)
     -
         options = options || {};
-        const {data = []} = options;
+        const {data = [], title = "", image = ""} = options;
     .education-block
-        +title({text: "education", src: "./static/images/star-icon.png"})
+        +title({text: title, src: image})
         .education-block__el
             +list({data: data})

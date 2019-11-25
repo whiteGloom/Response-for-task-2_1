@@ -3,8 +3,8 @@ include ../list/list
 mixin experience-block(options)
     -
         options = options || {};
-        const {data = []} = options;
+        const {data = [], title = "", image = ""} = options;
     .experience-block
-        +title({text: "experience", src: "./static/images/package-icon.png"})
+        +title({text: title, src: image})
         .experience-block
             +list({data: data})

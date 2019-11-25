@@ -3,8 +3,8 @@ include ../rate/rate
 mixin software-block(options)
     -
         options = options || {};
-        const {data = []} = options;
+        const {data = [], title = "", image = ""} = options;
     .software-block
-        +title({text: "software", src: "./static/images/computer-icon.png"})
+        +title({text: title, src: image})
         .software-block__el
             +rate({data: data, type: "linear"})
