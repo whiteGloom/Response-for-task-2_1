@@ -6,9 +6,8 @@ include ../education-block/education-block
 include ../experience-block/experience-block
 include ../software-block/software-block
 
-mixin content(options)
+mixin content(options = {})
     -
-        options = options || {};
         const {userData, profileData, contactsData, skillsData, educationData, experienceData, softwareData} = options;
     main.content
         .column.column_side_left

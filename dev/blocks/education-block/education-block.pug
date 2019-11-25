@@ -1,8 +1,7 @@
 include ../list/list
 
-mixin education-block(options)
+mixin education-block(options = {})
     -
-        options = options || {};
         const {data = [], title = "", image = ""} = options;
     .education-block
         +title({text: title, src: image})

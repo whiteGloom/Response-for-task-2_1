@@ -1,8 +1,7 @@
 include ../rate/rate
 
-mixin skills-block(options)
+mixin skills-block(options = {})
     -
-        options = options || {};
         const {data = [], title = "", image = ""} = options;
     section.skills-block
         +title({text: title, src: image})

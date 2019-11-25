@@ -1,8 +1,7 @@
 include ../icon/icon
 
-mixin title(options)
+mixin title(options = {})
     -
-        options = options || {};
         const {text = "title", src = ""} = options;
     header.title
         .title__outer

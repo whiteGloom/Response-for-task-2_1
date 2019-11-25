@@ -1,8 +1,7 @@
 include ../list/list
 
-mixin experience-block(options)
+mixin experience-block(options = {})
     -
-        options = options || {};
         const {data = [], title = "", image = ""} = options;
     .experience-block
         +title({text: title, src: image})

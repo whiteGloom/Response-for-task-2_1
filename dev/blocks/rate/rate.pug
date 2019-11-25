@@ -1,6 +1,5 @@
-mixin rate(options)
+mixin rate(options = {})
     -
-        options = options || {};
         const {type = "linear", data = []} = options;
     .rate(class="" + (" rate_type_" + type))
         for item in data

@@ -1,8 +1,7 @@
 include ../paragraph/paragraph
 
-mixin list(options)
+mixin list(options = {})
     -
-        options = options || {};
         const {data = []} = options;
     ul.list
         for item in data

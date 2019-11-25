@@ -1,8 +1,7 @@
 include ../icon/icon
 
-mixin user(options)
+mixin user(options = {})
     -
-        options = options || {};
         const {name = "name", surname, profession = "unknown", logo} = options;
     .user
         .user__image

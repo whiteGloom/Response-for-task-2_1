@@ -1,8 +1,7 @@
 include ../rate/rate
 
-mixin software-block(options)
+mixin software-block(options = {})
     -
-        options = options || {};
         const {data = [], title = "", image = ""} = options;
     .software-block
         +title({text: title, src: image})

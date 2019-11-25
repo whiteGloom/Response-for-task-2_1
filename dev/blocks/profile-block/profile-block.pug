@@ -1,9 +1,8 @@
 include ../title/title
 include ../paragraph/paragraph
 
-mixin profile-block(options)
+mixin profile-block(options = {})
     -
-        options = options || {};
         const {text = ""} = options;
     .profile-block
         .profile-block__title

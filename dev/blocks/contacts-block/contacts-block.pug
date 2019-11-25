@@ -1,8 +1,7 @@
 include ../contacts/contacts
 
-mixin contacts-block(options)
+mixin contacts-block(options = {})
     -
-        options = options || {};
         const {data = [], title="", image=""} = options;
     section.contacts-block
         +title({text: title, src: image})
