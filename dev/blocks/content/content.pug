@@ -10,25 +10,25 @@ mixin content(options = {})
     -
         const {userData, profileData, contactsData, skillsData, educationData, experienceData, softwareData} = options;
     main.content
-        .column.column_side_left
-            .column__section
+        .content__column.content__column_side_left
+            .content__section
                 +user(userData)
 
-            .column__section
+            .content__section
                 +profile-block(profileData)
 
-            .column__section
+            .content__section
                 +contacts-block(contactsData)
 
-            .column__section
+            .content__section
                 +skills-block(skillsData)
 
-        .column.column_side_right
-            .column__section
+        .content__column.content__column_side_right
+            .content__section
                 +education-block(educationData)
 
-            .column__section
+            .content__section
                 +experience-block(experienceData)
 
-            .column__section
+            .content__section
                 +software-block(softwareData)
